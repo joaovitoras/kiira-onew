@@ -9,12 +9,25 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
        <%= render 'layouts/messages' %>
+       <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="jumbotron">
+       <img style="float: right; margin: 0px 0px 15px 15px;" src="http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52d09387ae003_1.JPG" width="550" />
+                <h1>kiira Onew</h1>
+                <p>Ilustrador...</p>
+                <p>bla, bla, bla...</p>
+                <p>mi mi mi...</p>
+                <p>mi mi mi...</p>
+                <p>mi mi mi...</p>
+                <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+       
        <%= yield %>
-    </main>
+
   </body>
 </html>
