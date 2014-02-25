@@ -14,20 +14,106 @@
         <div class="row">
           <div class="col-sm-12 col-md-12">
             <div class="jumbotron">
-       <img style="float: right; margin: 0px 0px 15px 15px;" src="http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52d09387ae003_1.JPG" width="550" />
+                <img style="float: right; margin: 0px 0px 15px 15px;" src="http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52d09387ae003_1.JPG" width="550" />
                 <h1>kiira Onew</h1>
-                <p>Ilustrador...</p>
-                <p>bla, bla, bla...</p>
-                <p>mi mi mi...</p>
-                <p>mi mi mi...</p>
-                <p>mi mi mi...</p>
+                <%= sanitize(Main.all.last.heroinfo) %>
                 <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
       </div>
-       
-       <%= yield %>
 
+<div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                    </span>Portifolio</a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Desenhos</a>
+                    <ul class="list-group">
+                      <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Ilustrações</a></li>
+
+                      <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="http://fb.com/moinakbarali">Sketches</a></li>
+
+                      <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="http://fb.com/moinakbarali">Fan Art</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Videos</a>
+                    <ul class="list-group">
+                      <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Speed Paint</a></li>
+
+                      <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="http://fb.com/moinakbarali">...</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
+                    </span>Links</a>
+                </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Facebook Fan Page</a>
+
+                  <li class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><a href="http://fb.com/moinakbarali">Facebook Personal</a></li>
+
+                  <li class="list-group-item"><span class="glyphicon glyphicon-flash text-success"></span><a href="http://fb.com/moinakbarali">Twitter</a></li>
+
+                  <li class="list-group-item"><span class="glyphicon glyphicon-file text-info"></span><a href="http://fb.com/moinakbarali">DevianART</a></li>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-heart">
+                    </span>Reports</a>
+                </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  </a>
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  </a>
+                </div>
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="col-sm-9 col-md-9">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+       <%= yield %>
+ </div>
+          </div>
+        </div>
   </body>
 </html>

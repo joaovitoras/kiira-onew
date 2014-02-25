@@ -1,0 +1,29 @@
+<h3 class="panel-title">Newsletter</h3>
+</div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <% @mains.each do |main| %>
+        <div id="blog" class="row"> 
+          <div class="col-md-12 blogShort">
+            <h1><%= main.titlenews %></h1>
+            <img src="http://www.kaczmarek-photo.com/wp-content/uploads/2012/06/guinnes-150x150.jpg" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail">
+            <article><p><%= main.newscontent %></p></article>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row destacados">
+    <div class="col-md-4">
+        <div>
+        <img src="http://lorempixel.com/200/200/abstract/1/" alt="Texto Alternativo" class="img-circle img-thumbnail">
+        <h2>Drawings</h2>
+        <p>Aqui encontra-se todos os desenhos e bla bla bla bla bla bla bla dipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+        <a href="#" class="btn btn-primary" title="Enlace">Enter Galery »</a>
+      </div>
+    </div>
+  </div>
+</div>
