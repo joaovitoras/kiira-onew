@@ -9,7 +9,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-image">
-                    <%= image_tag(draw.image_url) %>
+                    <%= image_tag(draw.image_url, class: "img-rounded")%>
                     <label for=<%="toggle-#{@a+1}"%>></label>
                 </div>
                 <input type="checkbox" id=<%="toggle-#{@a+1}"%> class-"panel-image-toggle">
