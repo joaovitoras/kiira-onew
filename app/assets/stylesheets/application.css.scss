@@ -633,7 +633,7 @@ blockquote {
   padding: 10.5px 21px;
   margin: 0 0 21px;
   font-size: 18.75px;
-  border-left: 5px solid #4e5d6c;
+  border-left: 5px solid #63B76C;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -653,11 +653,24 @@ blockquote small:before,
 blockquote .small:before {
   content: '\2014 \00A0';
 }
+blockquote footer,
+blockquote h6,
+blockquote .h6 {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: #ebebeb;
+}
+blockquote footer:before,
+blockquote h6:before,
+blockquote .h6:before {
+  content: '\2014 \00A0';
+}
 .blockquote-reverse,
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #4e5d6c;
+  border-right: 5px solid #63B76C;
   border-left: 0;
   text-align: right;
 }
@@ -3374,9 +3387,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: px;
   font-weight: normal;
   line-height: 1;
-  color: #2b3e50;
+  color: #63B76C;
   text-align: center;
-  background-color: #4e5d6c;
+  background-color: #63B76C;
   border: 1px solid transparent;
   border-radius: 0;
 }
@@ -6012,20 +6025,20 @@ body {
 
 .destacados{
     padding: 20px 0;
-	text-align: center;
+  text-align: center;
 }
 .destacados > div > div{
-	padding: 10px;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	transition: 0.2s;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
 }
 .destacados > div:hover > div{
-	margin-top: -10px;
-	border: 1px solid rgb(200, 200, 200);
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-	background: rgba(200, 200, 200, 0.1);
-	transition: 0.5s;
+  margin-top: -10px;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  background: rgba(200, 200, 200, 0.1);
+  transition: 0.5s;
 }
 
 @import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css";
@@ -6038,10 +6051,30 @@ body {
 .box > .icon:hover > .image > i { color: white !important; }
 .box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; }
 .box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
-.box > .icon > .info > h3.title { font-family: "Roboto",sans-serif !important; font-size: 16px; color: #222; font-weight: 500; }
-.box > .icon > .info > p { font-family: "Roboto",sans-serif !important; font-size: 13px; color: #666; line-height: 1.5em; margin: 20px;}
-.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
-.box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+.box > .icon > .info > h3.title { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 16px; color: white; font-weight: 500; }
+.box > .icon > .info > p { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 14px; color: whitea; line-height: 1.5em; margin: 20px;}
+.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: white; }
+.box > .icon > .info > .more a { font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 12px; color: #fff; padding: 6px 8px; background-color: #df691a;  line-height: 12px; text-transform: uppercase; text-decoration: none; }
 .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
 .box .space { height: 30px; }
+
+
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+}
+
+#lightbox .close {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    top: -15px;
+    right: -55px;
+    
+    z-index:1032;
+}
 
