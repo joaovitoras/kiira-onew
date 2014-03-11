@@ -30,6 +30,7 @@ group :development do
 	gem 'sqlite3'
   	gem 'rails_layout'
 end
+gem 'rails_12factor', group: :production
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'

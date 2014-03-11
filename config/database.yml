@@ -22,5 +22,4 @@ production:
   adapter: postgresql
   host: localhost
   database: kiira-onew
-  username: root
   password: senha
