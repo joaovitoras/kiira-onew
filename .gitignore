@@ -18,4 +18,7 @@ rdoc
 tmp
 tmtags
 \#*
-temp\*
+temp\cache\*
+temp\pids\*
+temp\session\*
+temp\sockets\*
