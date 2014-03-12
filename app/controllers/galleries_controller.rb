@@ -64,11 +64,11 @@ class GalleriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_gallery
-      @gallery = Gallery.find(params[:id])
+      @gallery = Gallery.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gallery_params
-      params.require(:gallery).permit(:nome, :description)
+      params.require(:gallery).permit(:name, :description)
     end
 end
