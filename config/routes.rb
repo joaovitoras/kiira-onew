@@ -1,7 +1,4 @@
 KiiraOnew::Application.routes.draw do
-  resources :drawings
-
-  resources :galleries
 
   resources :galleries do 
   	resources :drawings
