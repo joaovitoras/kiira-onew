@@ -10,16 +10,22 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render 'layouts/navigation' %>
-    <div class="container">
-      <%= render 'layouts/hero' %>
-      <%= render 'layouts/galleries'%>
-      <%= render 'layouts/infos_about'%>
-      <%= render 'layouts/contact_me'%>
-    </div>  
+    <%= render 'partials/navigation' %>
+
+    <% if @page_title == "Home"%>
+      <div class="container">
+        <%= render 'partials/hero' %>
+        <%= render 'partials/galleries'%>
+        <%= render 'partials/infos_about'%>
+        <%= render 'partials/contact_me'%>
+      </div>
+    <%else%>
+      <%= yield%>  
+    <%end%>
+
     <hr>
     <div class="container">
-      <%= render 'layouts/footer'%>
+      <%= render 'partials/footer'%>
     </div>
   </body>
 </html>

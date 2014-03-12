@@ -1,35 +1,6 @@
 <h1>Editing drawing</h1>
 
-<%= form_for @drawing, :html => {:multipart => true} do |f| %>
-  <% if @drawing.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@drawing.errors.count, "error") %> prohibited this drawing from being saved:</h2>
-
-      <ul>
-      <% @drawing.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
-  </div>
-  <div>
-  	<%= image_tag @drawing.image_url.to_s %></br>
-    <%= f.file_field :image_url %>
-  </div></br>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
+<%= render 'form' %>
 
 <%= link_to 'Show', @drawing %> |
 <%= link_to 'Back', drawings_path %>

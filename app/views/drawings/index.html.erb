@@ -1,31 +1,29 @@
+<h1>Listing drawings</h1>
 
-  <h3 class="panel-title">Gallery of Drawings</h3>
-</div>
-<div class="panel-body">
-  <div class="row form-group">
-      <%@a = 0%>
-      <% @drawings.each do |draw| %>
-        <div class="col-xs-12 col-md-6">
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
 
-            <div class="panel panel-default">
-                <div class="panel-image">
-                    <%= image_tag(draw.image_url, class: "img-rounded")%>
-                    <label for=<%="toggle-#{@a+1}"%>></label>
-                </div>
-                <input type="checkbox" id=<%="toggle-#{@a+1}"%> class-"panel-image-toggle">
-                <div class="panel-body">
-                    <h4>Title of Image</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in lobortis nisl, vitae iaculis sapien. Phasellus ultrices gravida massa luctus ornare. Suspendisse blandit quam elit, eu imperdiet neque semper et.</p>
-                </div>
-                <div class="panel-footer text-center">
-                    <a href="#download"><span class="glyphicon glyphicon-download"></span></a>
-                    <a href="#facebook"><span class="fa fa-facebook"></span></a>
-                    <a href="#twitter"><span class="fa fa-twitter"></span></a>
-                    <a href="#share"><span class="glyphicon glyphicon-share-alt"></span></a>
-                </div>
-            </div>
-              <%@a = @a+1%>
-        </div>
-      <%end%>
-  </div>
-</div>
+  <tbody>
+    <% @drawings.each do |drawing| %>
+      <tr>
+        <td><%= drawing.nome %></td>
+        <td><%= drawing.description %></td>
+        <td><%= link_to 'Show', drawing %></td>
+        <td><%= link_to 'Edit', edit_drawing_path(drawing) %></td>
+        <td><%= link_to 'Destroy', drawing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drawing', new_drawing_path %>

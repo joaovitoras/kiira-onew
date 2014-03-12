@@ -1,17 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @drawing.name %>
+  <strong>Nome:</strong>
+  <%= @drawing.nome %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @drawing.description %>
-</p>
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @drawing.image_url.to_s %>
 </p>
 
 <%= link_to 'Edit', edit_drawing_path(@drawing) %> |

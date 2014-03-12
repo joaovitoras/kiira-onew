@@ -1,1 +1,1 @@
-json.extract! @drawing, :id, :name, :description, :created_at, :updated_at
+json.extract! @drawing, :id, :nome, :description, :created_at, :updated_at

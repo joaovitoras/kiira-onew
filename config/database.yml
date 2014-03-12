@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  host: localhost
   database: kiira-onew
-  password: senha
+  pool: 5
+  timeout: 5000
