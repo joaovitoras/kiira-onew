@@ -2,7 +2,7 @@ class CreateGalleries < ActiveRecord::Migration
   def change
     create_table :galleries do |t|
       t.string :nome
-      t.text :description
+      t.text   :description
 
       t.timestamps
     end
