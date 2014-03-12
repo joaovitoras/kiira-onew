@@ -1,14 +1,148 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @gallery.nome %>
-</p>
+	<% page_title =  "Galeria de + #{@gallery.name}"  %>
+    
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><%= @gallery.name %></h1>
+        </div>
+    </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @gallery.description %>
-</p>
+	<div class="row"> 
+		<div class="col-xs-6 col-md-6 column">  
+		<h2 class="text-info">Infos</h2>
+	        <ul class="nav">
+	          <h3><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3><br>
+			  <h3><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3><br>
+	        </ul>
+	    </div>        
+	      
 
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Back', galleries_path %>
+	    <div class="col-xs-6 col-md-6 column">          
+	     <h2 class="text-info">Content</h2>
+	      <ul class="nav">
+	        <li><h4>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque h4enatibus et magnis dis h4arturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque h4enatibus et magnis dis h4arturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque h4enatibus et magnis dis h4arturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</h4></li><br>
+	      </ul>
+	    </div> 
+	</div>
+
+	<div class="row">	       
+        <div class="panel panel-default">
+        	<div class="panel-body">
+        		<div class="row">
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+
+            <div class="col-md-3 portfolio-item">
+                <a href="#project-link">
+                    <img class="img-responsive" src="http://placehold.it/700x400">
+                </a>
+                <h4><a href="#project-link">Project Name</a>
+            </div>
+        </div>
+    </div>
+	</div>
+</div>
