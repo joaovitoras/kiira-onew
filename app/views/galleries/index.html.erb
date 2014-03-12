@@ -1,9 +1,10 @@
-<h1>Listing galleries</h1>
+<% @page_title = "Home" %>
+ <h1>Listing galleries</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
+      <th>name</th>
       <th>Description</th>
       <th></th>
       <th></th>
@@ -14,7 +15,7 @@
   <tbody>
     <% @galleries.each do |gallery| %>
       <tr>
-        <td><%= gallery.nome %></td>
+        <td><%= gallery.name %></td>
         <td><%= gallery.description %></td>
         <td><%= link_to 'Show', gallery %></td>
         <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>

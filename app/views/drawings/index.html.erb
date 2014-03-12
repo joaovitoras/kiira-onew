@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Nome</th>
+      <th>name</th>
       <th>Description</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @drawings.each do |drawing| %>
       <tr>
-        <td><%= drawing.nome %></td>
+        <td><%= drawing.name %></td>
         <td><%= drawing.description %></td>
         <td><%= link_to 'Show', drawing %></td>
         <td><%= link_to 'Edit', edit_drawing_path(drawing) %></td>
