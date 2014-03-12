@@ -1,3 +1,4 @@
+
 require 'test_helper'
 
 class DrawingsControllerTest < ActionController::TestCase
@@ -18,7 +19,7 @@ class DrawingsControllerTest < ActionController::TestCase
 
   test "should create drawing" do
     assert_difference('Drawing.count') do
-      post :create, drawing: { description: @drawing.description, nome: @drawing.nome }
+      post :create, drawing: { description: @drawing.description, name: @drawing.name }
     end
 
     assert_redirected_to drawing_path(assigns(:drawing))
@@ -35,7 +36,7 @@ class DrawingsControllerTest < ActionController::TestCase
   end
 
   test "should update drawing" do
-    patch :update, id: @drawing, drawing: { description: @drawing.description, nome: @drawing.nome }
+    patch :update, id: @drawing, drawing: { description: @drawing.description, name: @drawing.name }
     assert_redirected_to drawing_path(assigns(:drawing))
   end
 

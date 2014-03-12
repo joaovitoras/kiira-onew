@@ -1,3 +1,4 @@
+
 require 'test_helper'
 
 class GalleriesControllerTest < ActionController::TestCase
@@ -18,7 +19,7 @@ class GalleriesControllerTest < ActionController::TestCase
 
   test "should create gallery" do
     assert_difference('Gallery.count') do
-      post :create, gallery: { description: @gallery.description, nome: @gallery.nome }
+      post :create, gallery: { description: @gallery.description, name: @gallery.name }
     end
 
     assert_redirected_to gallery_path(assigns(:gallery))
@@ -35,7 +36,7 @@ class GalleriesControllerTest < ActionController::TestCase
   end
 
   test "should update gallery" do
-    patch :update, id: @gallery, gallery: { description: @gallery.description, nome: @gallery.nome }
+    patch :update, id: @gallery, gallery: { description: @gallery.description, name: @gallery.name }
     assert_redirected_to gallery_path(assigns(:gallery))
   end
 
