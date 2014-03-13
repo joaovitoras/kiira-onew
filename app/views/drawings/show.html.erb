@@ -12,7 +12,11 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500">
+                <a href="https://lh4.googleusercontent.com/-lB-KDQlhdAE/T0oJGy0-UOI/AAAAAAAAQyw/K-1hc5M7EQM/s800/IMG_1193%2520-%2520original.jpg" data-toggle="lightbox" data-gallery="global-gallery" data-parent=".container">
+                   
+                    <%= image_tag("//lh4.googleusercontent.com/-lB-KDQlhdAE/T0oJGy0-UOI/AAAAAAAAQyw/K-1hc5M7EQM/s800/IMG_1193%2520-%2520original.jpg", class: "img-responsive",size: "500,750") %>
+                    
+                </a>
             </div>
 
             <div class="col-md-4">
@@ -59,14 +63,33 @@
                 </a>
             </div>
 
-        </div>
 
-<p>
-  <strong>name:</strong>
-  <%= @drawing.name %>
-</p>
+ 
+        <!-- yea, yea, not a cdn, i know -->
+        <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function ($) {
 
-<p>
-  <strong>Description:</strong>
-  <%= @drawing.description %>
-</p>
+                // delegate calls to data-toggle="lightbox"
+                $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                    event.preventDefault();
+                    return $(this).ekkoLightbox({
+                        onShown: function() {
+                            if (window.console) {
+                                return console.log('Checking our the events huh?');
+                            }
+                        }
+                    });
+                });
+
+                //Programatically call
+                $('#open-image').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+                $('#open-youtube').click(function (e) {
+                    e.preventDefault();
+                    $(this).ekkoLightbox();
+                });
+            });
+        </script>
