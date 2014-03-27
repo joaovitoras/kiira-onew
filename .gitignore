@@ -18,3 +18,5 @@ rdoc
 tmp
 tmtags
 \#*
+
+*.sqlite3

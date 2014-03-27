@@ -2,13 +2,9 @@
 
 class ImageUploader < CarrierWave::Uploader::Base
 
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
-  # include CarrierWave::MiniMagick
+ storage :dropbox
 
-  # Choose what kind of storage to use for this uploader:
-  storage :file
   def store_dir
-    "public/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "kiira-app-uploaders/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 end
