@@ -14,11 +14,8 @@ db/database.yml
 log/*
 pkg
 Procfile.local
+public/uploads
 rdoc
 tmp
 tmtags
 \#*
-
-*.sqlite3
-
-*.sqlite3
