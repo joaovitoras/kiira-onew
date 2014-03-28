@@ -218,9 +218,15 @@ th {
   tr,
   img {
     page-break-inside: avoid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   img {
     max-width: 100% !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   p,
   h2,
@@ -306,15 +312,18 @@ figure {
 }
 img {
   vertical-align: middle;
+
 }
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-  display: block;
   max-width: 100%;
   height: auto;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .img-rounded {
   border-radius: 0;
