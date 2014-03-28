@@ -15,13 +15,13 @@
     <% if @page_title == "Home"%>
       <div class="container">
         <%= render 'partials/hero' %>
-        <%= render 'partials/galleries'%>
+        <%= yield %>
         <%= render 'partials/infos_about'%>
         <%= render 'partials/contact_me'%>
       </div>
     <%else%>
     <div class="container">
-      <%= yield%>
+      <%= yield %>
     </div>
     <%end%>
 
