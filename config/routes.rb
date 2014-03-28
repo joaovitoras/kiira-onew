@@ -1,5 +1,6 @@
 KiiraOnew::Application.routes.draw do
 
+  devise_for :users
   resources :galleries do 
   	resources :drawings
   end
