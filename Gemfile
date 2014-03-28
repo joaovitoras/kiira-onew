@@ -14,7 +14,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
 gem "carrierwave"
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -22,7 +21,6 @@ gem "carrierwave"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'friendly_id'
-gem 'masonry-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -39,7 +37,7 @@ gem 'rails_12factor', group: :production
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'cancan'
-gem 'devise', '~> 1.4'
+gem 'devise', '3.0.0.rc'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 group :doc do
