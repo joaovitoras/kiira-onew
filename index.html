@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Kiira-onew by joaovitoras</title>
+    <title>Kiira-onew Project by joaovitoras</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Kiira-onew</h1>
-        <h2></h2>
+        <h1>Kiira-onew Project</h1>
+        <h2>For Designers</h2>
         <a href="https://github.com/joaovitoras/kiira-onew" class="button"><small>View project on</small>GitHub</a>
       </div>
     </header>
@@ -28,32 +28,65 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a name="bem-vindo-ao-projeto-kiira-onew" class="anchor" href="#bem-vindo-ao-projeto-kiira-onew"><span class="octicon octicon-link"></span></a>Bem Vindo ao projeto Kiira Onew.</h3>
+          <h1>
+<a name="bem-vindo-ao-projeto-kiira-onew" class="anchor" href="#bem-vindo-ao-projeto-kiira-onew"><span class="octicon octicon-link"></span></a>Bem Vindo ao projeto Kiira Onew</h1>
 
-<p>Este app é um portfólio para Desgners...</p>
+<p>Este app é um portfólio para Designers...</p>
 
-<p>Para obter esse app basta utilizar o git clone</p>
+<h3>
+<a name="para-obter-esse-app-basta-utilizar-o-git-clone" class="anchor" href="#para-obter-esse-app-basta-utilizar-o-git-clone"><span class="octicon octicon-link"></span></a>Para obter esse app basta utilizar o git clone</h3>
 
-<hr><pre><code>$ git clone git://github.com/joaovitoras/kiira-onew.git
+<pre><code>$ git clone git://github.com/joaovitoras/kiira-onew.git
 </code></pre>
 
-<p>Inicializando o App</p>
+<p>Antes de iniciar o app rode</p>
 
-<hr><pre><code>$ cd kiira-onew
+<pre><code>$ cd kiira-onew
 $ rake db:setup
 $ rake db:seed
 </code></pre>
 
+<p>Agora rode o servidor rails</p>
+
+<pre><code>$ rails s
+</code></pre>
+
 <h3>
-<a name="upload-de-imagem-com-carriwave" class="anchor" href="#upload-de-imagem-com-carriwave"><span class="octicon octicon-link"></span></a>Upload de Imagem com Carriwave</h3>
+<a name="upload-de-imagens-feitos-com-a-gem-carrierwave" class="anchor" href="#upload-de-imagens-feitos-com-a-gem-carrierwave"><span class="octicon octicon-link"></span></a>Upload de Imagens feitos com a gem <a href="https://github.com/carrierwaveuploader/carrierwave">carrierwave</a>
+</h3>
 
-<p>Em produção, o servidor para upload de imagens é o Drop Box, </p>
+<p>Em development configure o local para o upload de suas imagens no arquivo <a href="https://github.com/joaovitoras/kiira-onew/blob/master/app/uploaders/image_uploader.rb">image_uploader.rb</a></p>
+
+<div class="highlight highlight-ruby"><pre> <span class="k">def</span> <span class="nf">store_dir</span>
+    <span class="s2">"public/</span><span class="si">#{</span><span class="n">model</span><span class="o">.</span><span class="n">class</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">underscore</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">mounted_as</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">model</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">"</span>
+ <span class="k">end</span>
+</pre></div>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="em-produ%C3%A7%C3%A3o-%C3%A9-utilizado-o-dropbox-para-servidor-de-imagens-com-a-gem-carrierwave-dropbox" class="anchor" href="#em-produ%C3%A7%C3%A3o-%C3%A9-utilizado-o-dropbox-para-servidor-de-imagens-com-a-gem-carrierwave-dropbox"><span class="octicon octicon-link"></span></a>Em produção é utilizado o dropbox para servidor de imagens com a gem <a href="https://github.com/robin850/carrierwave-dropbox">carrierwave-dropbox</a>
+</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Configure o as variaveis de ambiente para acesso a sua conta no dropbox <a href="https://github.com/joaovitoras/kiira-onew/blob/master/config/initializers/dropbox.rb">dropbox.rb</a>.</p>
+
+<div class="highlight highlight-ruby"><pre> <span class="no">CarrierWave</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">dropbox_app_key</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"APP_KEY"</span><span class="o">]</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">dropbox_app_secret</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"APP_SECRET"</span><span class="o">]</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">dropbox_access_token</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"ACCESS_TOKEN"</span><span class="o">]</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">dropbox_access_token_secret</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"ACCESS_TOKEN_SECRET"</span><span class="o">]</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">dropbox_user_id</span> <span class="o">=</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"USER_ID"</span><span class="o">]</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">dropbox_access_type</span> <span class="o">=</span> <span class="s2">"dropbox"</span>
+<span class="k">end</span>
+</pre></div>
+
+<p>Para resgatar essas informações, acesse o site <a href="https://www.dropbox.com/developers/apps">Drop Box Apps</a></p>
+
+<p>Crie um no app e acesse-o...</p>
+
+<h3>
+<a name="o-tema-usado-foi-o-superhero-feito-pelo-bootswatch-utilizando-o-bootstrap" class="anchor" href="#o-tema-usado-foi-o-superhero-feito-pelo-bootswatch-utilizando-o-bootstrap"><span class="octicon octicon-link"></span></a>O tema usado foi o <a href="http://bootswatch.com/superhero/">SuperHero</a> feito pelo <a href="http://bootswatch.com/">Bootswatch</a> utilizando o <a href="http://getbootstrap.com/">Bootstrap</a>
+</h3>
+
+<p><img src="http://s27.postimg.org/tazs0eyw3/thumbnail.png" alt="SuperHero Theme"></p>
 
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
@@ -61,9 +94,9 @@ $ rake db:seed
 <p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="autores-de-contribuidores" class="anchor" href="#autores-de-contribuidores"><span class="octicon octicon-link"></span></a>Autores de Contribuidores</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>O <a href="https://github.com/joaovitoras/kiira-onew"><strong>Kiira Onew Project</strong></a>é mantido por <a href="https://github.com/joaovitoras" class="user-mention">@joaovitoras</a>. em contribuição com o designer <a href="http://kiiraonew.deviantart.com/">Kiira Onew</a></p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
