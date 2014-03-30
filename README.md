@@ -22,7 +22,7 @@ Em development configure o local para o upload de suas imagens no arquivo [image
     "public/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
  end
 ```
-### Em produção é utilizado o dropbox para servidor de imagens com a gem [carrierwave-dropbox](https://github.com/robin850/carrierwave-dropbox)
+### Em produção é utilizado o dropbox como servidor de imagens, com a gem [carrierwave-dropbox](https://github.com/robin850/carrierwave-dropbox)
 Configure o as variaveis de ambiente para acesso a sua conta no dropbox [dropbox.rb](https://github.com/joaovitoras/kiira-onew/blob/master/config/initializers/dropbox.rb).
 ```ruby
  CarrierWave.configure do |config|
@@ -43,11 +43,7 @@ Crie um no app e acesse-o...
 
 ![SuperHero Theme](http://s27.postimg.org/tazs0eyw3/thumbnail.png)
 
-### Rather Drive Stick?
-If you prefer to not use the automatic generator, push a branch named `gh-pages` to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.
-
 ### Autores de Contribuidores
-O [**Kiira Onew Project**](https://github.com/joaovitoras/kiira-onew)é mantido por @joaovitoras. em contribuição com o designer [Kiira Onew](http://kiiraonew.deviantart.com/)
+O [**Kiira Onew Project**](https://github.com/joaovitoras/kiira-onew)é mantido por @joaovitoras. em contribuição com o designer [Kiira Onew](http://kiiraonew.deviantart.com/) para o compartilhamento do seu trabalho de força intuitiva.
 
-### Support or Contact
-Having trouble with Pages? Check out the documentation at http://help.github.com/pages or contact support@github.com and we’ll help you sort it out.
+
