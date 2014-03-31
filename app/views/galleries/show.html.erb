@@ -28,34 +28,34 @@
         <div class="col-xs-6 col-md-4  column">          
          <h2 class="text-info">Share <%= @gallery.name%> in:</h2>
           <ul class="nav">
-            <h4><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3>
               <h4><i class="fa fa fa-picture-o"></i> Share in deviantArt</h3>
-              <h4><i class="fa fa fa-pinterest"></i>  Share in Printerest</h3>
-              <h4><i class="fa fa fa-instagram"></i>  Share in Twitter </h3>
+              <h4><i class="fa fa fa-pinterest"></i>  <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=<%="localhost:3000"+@gallery.drawings.first.image_url%>&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+
+              <h4><i class="fa fa fa-instagram"></i> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Visualizando a galeria de <%= @gallery.name %> do @kiira_Onew - <%= request.original_url %>" data-via="kiira-Onew" data-lang="pt" data-related="kiira_Onew" data-hashtags="Gallery,kiira_Onew">Tweetar</a></h3>
               <h4><i class="fa fa fa-instagram"></i>  <div class="fb-share-button" data-href="<%= request.original_url %>" data-type="button_count"></div> </h3>
-              <h4><i class="fa fa fa-instagram"></i>  Share in Google+ </h3>
+              <h4><i class="fa fa fa-instagram"></i>  <div class="g-plus" data-action="share" data-annotation="bubble"></div> </h3>
+
 
           </ul>
 
         </div> 
     </div>
-
+    <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Drawings <i class="fa fa-picture-o"></i></h1>
+        </div>
+      </div>
     <div class="row">          
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div class="row">
-                    <% @gallery.drawings.each do | drawing | %>
-                        <div class="col-md-3 portfolio-item">
-                            <a href=<%= gallery_drawing_path(@gallery,drawing) %>>
-                                <%= image_tag(drawing.image_url(:drawings), class: "img-responsive" ) %>
-                            </a>
-                            <h4>
-                                <a href="#"><%= link_to drawing.name, gallery_drawing_path(@gallery,drawing) %> </a>
-                        </div>
-                    <% end %>
-                </div>
-            </div>
-       </div>
+          <% @gallery.drawings.each do | drawing | %>
+              <div class="col-md-3 portfolio-item">
+                  <a href=<%= gallery_drawing_path(@gallery,drawing) %>>
+                      <%= image_tag(drawing.image_url(:drawings), class: "img-responsive" ) %>
+                  </a>
+                  <h4>
+                      <a href="#"><%= link_to drawing.name, gallery_drawing_path(@gallery,drawing) %> </a>
+              </div>
+          <% end %>
+
     </div>
 </div>
 
@@ -68,3 +68,14 @@
   js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script></h3>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+  window.___gcfg = {lang: 'pt-BR'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

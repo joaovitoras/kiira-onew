@@ -12,9 +12,9 @@
         <div class="row">
 
             <div class="col-md-8">
-                <a href="https://lh4.googleusercontent.com/-lB-KDQlhdAE/T0oJGy0-UOI/AAAAAAAAQyw/K-1hc5M7EQM/s800/IMG_1193%2520-%2520original.jpg" data-toggle="lightbox" data-gallery="global-gallery" data-parent=".container">
+                <a href="<%= @drawing.image_url%>" data-toggle="lightbox" data-gallery="global-gallery" data-parent=".container">
                    
-                    <%= image_tag("//lh4.googleusercontent.com/-lB-KDQlhdAE/T0oJGy0-UOI/AAAAAAAAQyw/K-1hc5M7EQM/s800/IMG_1193%2520-%2520original.jpg", class: "img-responsive",size: "500,750") %>
+                    <%= image_tag(@drawing.image_url, class: "img-responsive",size: "500,750") %>
                     
                 </a>
             </div>
