@@ -48,14 +48,6 @@ ActiveRecord::Schema.define(version: 20150420154422) do
 
   add_index "galleries", ["slug"], name: "index_galleries_on_slug", unique: true
 
-  create_table "mains", force: true do |t|
-    t.text     "heroinfo"
-    t.string   "titlenews"
-    t.text     "newscontent"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
