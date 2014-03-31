@@ -13,21 +13,26 @@
         <div class="col-xs-6 col-md-4 column">          
          <h2 class="text-info">Details</h2>
           <ul class="nav">
-            <li><h4><%=@gallery.description%> See in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in Instagram</h4></li><br>
+            <li><h4><%=@gallery.description%> See in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in Instagram</h4></li>
+          </ul>
+        </div> 
+        <div class="col-xs-6 col-md-3 column">          
+         <h2 class="text-info">Details</h2>
+          <ul class="nav">
               <h4><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3>
               <h4><i class="fa fa fa-picture-o"></i> See in deviantArt</h3>
               <h4><i class="fa fa fa-pinterest"></i>  See in Printerest</h3>
               <h4><i class="fa fa fa-instagram"></i>  See in Instagram </h3>
           </ul>
         </div> 
-        <div class="col-xs-6 col-md-8 column">          
+        <div class="col-xs-6 col-md-4  column">          
          <h2 class="text-info">Share <%= @gallery.name%> in:</h2>
           <ul class="nav">
-            <h4><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3><br>
+            <h4><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3>
               <h4><i class="fa fa fa-picture-o"></i> Share in deviantArt</h3>
               <h4><i class="fa fa fa-pinterest"></i>  Share in Printerest</h3>
               <h4><i class="fa fa fa-instagram"></i>  Share in Twitter </h3>
-              <h4><i class="fa fa fa-instagram"></i>  Share in Facebook </h3>
+              <h4><i class="fa fa fa-instagram"></i>  <div class="fb-share-button" data-href="<%= request.original_url %>" data-type="button_count"></div> </h3>
               <h4><i class="fa fa fa-instagram"></i>  Share in Google+ </h3>
 
           </ul>
@@ -53,3 +58,13 @@
        </div>
     </div>
 </div>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
