@@ -14,6 +14,15 @@ html {
 }
 body {
   margin: 0;
+  background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Southlake_Suburb.JPG/1280px-Southlake_Suburb.JPG') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  color:#fff;
+    background-color:#333;
+    font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+  padding-top: 100px;
 }
 article,
 aside,
@@ -324,6 +333,11 @@ img {
   display: block;
     margin-left: auto;
     margin-right: auto;
+    /*box-shadow: 8px 8px 10px #888888;*/
+  padding: 4px;  
+  line-height: 1.428571429;  
+  border: 1px solid #dddddd;  
+  border-radius: 4px;  
 }
 .img-rounded {
   border-radius: 0;
@@ -3045,6 +3059,7 @@ input[type="button"].btn-block {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
+
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -3094,6 +3109,7 @@ input[type="button"].btn-block {
 }
 .open > .dropdown-menu {
   display: block;
+  box-shadow: 5px 5px 5px #2b3e50;
 }
 .open > a {
   outline: 0;

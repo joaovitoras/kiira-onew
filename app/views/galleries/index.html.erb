@@ -9,7 +9,7 @@
           <% @galleries.each do | gallery | %>
             <div class="col-md-4 portfolio-item">
                 <a href=<%= gallery_path(gallery) %>>
-                  <%= image_tag(gallery.drawings.first.image_url(:home), class: "img-responsive", align: "middle" ) %>
+                  <%= image_tag(gallery.drawings.first.image_url(:home), class: "img-responsive" ) %>
                 </a>
                 <h3><a href"#" > <%= link_to gallery.name, gallery_path(gallery) %></a>
                 </h3>
