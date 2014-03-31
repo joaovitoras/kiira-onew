@@ -19,4 +19,5 @@ rdoc
 tmp
 tmtags
 \#*
-public/kiira-app-uploaders
+public/drawing
+public/uploads
