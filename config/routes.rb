@@ -1,8 +1,5 @@
 KiiraOnew::Application.routes.draw do
 
-  get "static_page/who"
-  get "static_page/what"
-  get "static_page/why"
   devise_for :users
   resources :galleries do 
   	resources :drawings
