@@ -49,7 +49,7 @@
           <% @gallery.drawings.each do | drawing | %>
               <div class="col-md-3 portfolio-item">
                   <a href=<%= gallery_drawing_path(@gallery,drawing) %>>
-                      <%= image_tag(drawing.image_url(:drawings), class: "img-responsive" ) %>
+                      <%= image_tag(drawing.image_url(:drawings), class: "img-responsive" )  if drawing.image?  %>
                   </a>
                   <h4>
                       <a href="#"><%= link_to drawing.name, gallery_drawing_path(@gallery,drawing) %> </a>

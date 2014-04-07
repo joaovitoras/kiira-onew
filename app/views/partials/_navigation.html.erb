@@ -15,15 +15,9 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="fa fa-picture-o"></i> Portifolio <span class="caret"></span></a>
           <ul class="dropdown-menu" aria-labelledby="themes">
-            <li><a href="../default/">Drawingss</a></li>
-            <li class="divider"></li>
-            <li><a href="../amelia/">Illustrations</a></li>
-            <li><a href="../cerulean/">Fan art</a></li>
-            <li><a href="../cosmo/">Sketches</a></li>
-            <li><a href="../cyborg/">Championship</a></li>
-            <li><a href="../flatly/">Videos</a></li>
-            <li><a href="../journal/">Tattoos</a></li>
-            <li><a href="../lumen/">Lumen</a></li>
+            <% Gallery.all.each do | gallery |%>
+            <li><a href=<%=gallery_path(gallery)%>> <%= gallery.name %></a></li>
+            <% end %>
           </ul>
         </li>
         <li class="dropdown">

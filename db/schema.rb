@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420154423) do
+ActiveRecord::Schema.define(version: 20150420154424) do
 
   create_table "drawings", force: true do |t|
     t.string   "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150420154423) do
     t.string   "url_deviantart"
     t.string   "url_printerest"
     t.string   "url_instagram"
+    t.string   "image"
   end
 
   add_index "galleries", ["slug"], name: "index_galleries_on_slug", unique: true
