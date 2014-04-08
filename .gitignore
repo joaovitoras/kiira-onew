@@ -15,8 +15,9 @@ log/*
 pkg
 Procfile.local
 public/uploads
+public/public
 rdoc
-tmp
+tmp/*
 tmtags
 \#*
 public/drawing*
