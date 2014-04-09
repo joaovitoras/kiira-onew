@@ -8,6 +8,7 @@
 
           <% @galleries.each do | gallery | %>
             <div class="col-md-4 portfolio-item">
+              <div class="box-image">
                 <a href=<%= gallery_path(gallery) %>>
                   <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>
                 </a>
@@ -15,5 +16,6 @@
                 </h3>
                 <p> <%= gallery.description %></p>
             </div>
+          </div>
           <% end %>
         </div>
