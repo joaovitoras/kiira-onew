@@ -22,3 +22,5 @@ tmtags
 \#*
 public/drawing*
 public/uploads*
+
+db/schema.rb
