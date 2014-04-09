@@ -11,10 +11,10 @@
               <div class="box-image">
                 <a href=<%= gallery_path(gallery) %>>
                   <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>
-                </a>
-                <h3><a href"#" > <%= link_to gallery.name, gallery_path(gallery) %></a>
-                </h3>
-                <p> <%= gallery.description %></p>
+                </a><i class=></i>
+                <h4><a href"#" > <%= link_to gallery.name, gallery_path(gallery)%> <%= tag("i", class: "fa fa-external-link")%></i> <i class="fa fa-picture-o right"> <%= gallery.drawings.count %></i></a>
+                </h4>
+                <p class="description"> fa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o right <i class="fa fa-info-circle right-bottom"></i></p>
             </div>
           </div>
           <% end %>
