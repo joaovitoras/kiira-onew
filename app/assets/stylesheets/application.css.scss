@@ -494,6 +494,9 @@ h6,
 p {
   margin: 0 0 10.5px;
 }
+p.description{
+  margin: 0 0 1px;
+}
 .lead {
   margin-bottom: 21px;
   font-size: 17px;
@@ -822,6 +825,13 @@ pre code {
   margin-bottom: 34px;
 }
 
+.right{
+  float: right;
+}
+.right-bottom{
+  float: right;
+  bottom: 0;
+}
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
 }
