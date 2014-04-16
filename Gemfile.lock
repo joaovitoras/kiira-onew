@@ -61,6 +61,7 @@ GEM
       railties (>= 3.2, < 5.0)
     friendly_id (5.0.3)
       activerecord (>= 4.0.0)
+    gmaps4rails (2.1.2)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -80,6 +81,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metamagic (2.0.6)
+      rails (>= 3.0.0)
     mime-types (1.25.1)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
@@ -178,8 +181,10 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0.rc)
   friendly_id
+  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
+  metamagic
   mini_magick
   pg
   rails (= 4.0.2)

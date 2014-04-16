@@ -17,6 +17,9 @@ gem 'rails_admin'
 gem 'turbolinks'
 gem "mini_magick"
 gem 'rmagick'
+gem 'gmaps4rails'
+gem 'metamagic'
+
 group :development do
   	gem 'rails_layout'
   	gem 'sqlite3'
