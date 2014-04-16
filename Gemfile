@@ -18,7 +18,7 @@ gem 'turbolinks'
 gem "mini_magick"
 gem 'rmagick'
 gem 'gmaps4rails'
-gem 'metamagic'
+gem 'meta-tags'
 
 group :development do
   	gem 'rails_layout'
