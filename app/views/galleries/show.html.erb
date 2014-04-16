@@ -1,7 +1,6 @@
-<%= @page_title = "Kiira Onew #{@gallery.name}"%>
 <% content_for :head do %>
-  <title><%= @page_title %></title>
-  <meta property="og:title" content=<%= @page_title %>/>
+  <title><%= "Kiira Onew #{@gallery.name}" %></title>
+  <meta property="og:title" content=<%= "Kiira Onew #{@gallery.name}" %>/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content=<%= request.original_url %>/>
   <meta property="og:image" content=<%= @gallery.drawings.first.image_url(:home)%>/>
