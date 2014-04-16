@@ -14,7 +14,7 @@
       <ul class="nav navbar-nav">
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-picture-o"></i> Portifolio <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="themes">
+          <ul class="dropdown-menu">
             <% Gallery.all.each do | gallery |%>
             <li><a href=<%=gallery_path(gallery)%>> <%= gallery.name %></a></li>
             <% end %>
@@ -22,7 +22,7 @@
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><i class="fa fa-external-link"></i> Links <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="download">
+          <ul class="dropdown-menu">
             <li><a href="./bootstrap.min.css">Facebook</a></li>
             <li><a href="./bootstrap.css">Twitter</a></li>
             <li><a href="./bootstrap.css">YouTube</a></li>
@@ -39,7 +39,7 @@
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-info-circle"></i> About Me <span class="caret"></span></a>
-          <ul class="dropdown-menu" aria-labelledby="download">
+          <ul class="dropdown-menu">
             <li><a href=<%= why_path %>>Who?</a></li>
             <li><a href=<%= what_path %>>What?</a></li>
             <li><a href=<%= why_path %>>Why?</a></li>
