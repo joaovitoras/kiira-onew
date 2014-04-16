@@ -1,6 +1,11 @@
+<%
+  meta [:property => "og:title", :content => "#{@gallery.name}"]
+  meta [:property => "og:site_name", :content => "Kiira Onew Designer and Illustrator"]
+  meta [:property => "og:url", :content => "http://kiira-production.herokuapp.com"]
+  meta [:property => "og:description", :content => "#{@gallery.description}"]
+  meta [:property => "og:image", :content => "#{@gallery.drawings.first.image_url}"]
+%>
 <p id="notice"><%= notice %></p>
-
-    <% page_title =  "Galeria de + #{@gallery.name}"  %>
 
     <div class="row">
         <div class="col-lg-12">
@@ -9,7 +14,6 @@
     </div>
 
     <div class="row">
-
         <div class="col-xs-6 col-md-4 column">
          <h2 class="text-info">Details <i class="fa fa-info right"></i></h2>
           <ul class="nav">
@@ -34,7 +38,7 @@
               <h4><i class="fa fa fa-pinterest"></i>  <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=<%="localhost:3000"+@gallery.drawings.first.image_url%>&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
 
               <h4><i class="fa fa fa-instagram"></i> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Visualizando a galeria de <%= @gallery.name %> do @kiira_Onew - <%= request.original_url %>" data-via="kiira-Onew" data-lang="pt" data-related="kiira_Onew" data-hashtags="Gallery,kiira_Onew">Tweetar</a></h3>
-              <h4><i class="fa fa fa-instagram"></i>  <div class="fb-share-button" data-href="<%= request.original_url %>" data-type="button_count"></div> </h3>
+              <h4><i class="fa fa fa-instagram"></i>  <div class="fb-share-button" data-href="http://127.0.0.1:3000/galleries/asdasd" data-type="button_count"></div> </h3>
               <h4><i class="fa fa fa-instagram"></i>  <div class="g-plus" data-action="share" data-annotation="bubble"></div> </h3>
 
 

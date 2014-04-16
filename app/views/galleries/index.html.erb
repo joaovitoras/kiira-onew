@@ -1,3 +1,10 @@
+<%
+  meta [:property => "og:title", :content => "#asd"]
+  meta [:property => "og:site_name", :content => "Kiira Onew Designer and Illustrator"]
+  meta [:property => "og:url", :content => "http://kiira-production.herokuapp.com"]
+  meta [:property => "og:description", :content => "#{@galleries.first.drawings.first.description}"]
+  meta [:property => "og:image", :content => "#{@galleries.first.drawings.first.image_url(:home)}"]
+%>
 <% @page_title = "Home" %>
          <div class="row">
           <div class="col-lg-12">
