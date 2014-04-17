@@ -3,8 +3,8 @@
   <meta property="og:title" content=<%= "Kiira Onew #{@gallery.name}" %>/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content=<%= request.original_url %>/>
-  <meta property="og:description" content=<%= @gallery.description%>/>
-  <meta property="og:image" content=<%= @gallery.drawings.first.image_url(:drawings)%>/>
+  <meta property="og:description" content=<%= @gallery.description %>/>
+  <meta property="og:image" content=<%= @gallery.drawings.first.image_url%>/>
 <% end %>
 
 
