@@ -18,10 +18,15 @@
   <% @galleries.each do | gallery | %>
     <div class="col-md-4 portfolio-item">
       <div class="box-image">
-        <a href=<%= gallery_path(gallery) %>>
+        <%= link_to gallery_path(gallery) do  %>
           <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>
-        </a>
-        <h4><%= link_to gallery.name, gallery_path(gallery)%> <%= tag("i", class: "fa fa-external-link")%></i> <i class="fa fa-picture-o right"> <%= gallery.drawings.count %></i>
+        <%end%>
+        <h4><%= link_to gallery_path(gallery) do %> 
+            <%=gallery.name%>
+            <%= tag("i", class: "fa fa-external-link")%></i>  
+        <%end%>
+        <i class="fa fa-picture-o right">
+        <%= gallery.drawings.count %></i>
         </h4>
         <p class="description"> fa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o right <i class="fa fa-info-circle right-bottom"></i></p>
     </div>

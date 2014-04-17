@@ -59,11 +59,14 @@
 
           <% @gallery.drawings.each do | drawing | %>
               <div class="col-md-3 portfolio-item">
-                  <a href=<%= gallery_drawing_path(@gallery,drawing) %>>
+                  <%= link_to gallery_drawing_path(@gallery,drawing) do %>
                       <%= image_tag(drawing.image_url(:home), class: "img-thumbnail" )  if drawing.image?  %>
-                  </a>
-                  <h4>
-                      <a href="#"><%= link_to drawing.name, gallery_drawing_path(@gallery,drawing) %> <%= tag("i", class: "fa fa-external-link right")%> </i></a>
+                  <%end%>
+                  <h4><%= link_to gallery_drawing_path(@gallery,drawing) do  %> 
+                        <%= drawing.name %>
+                        <%= tag("i", class: "fa fa-external-link")%> </i></a>
+                      <% end %>
+                    </h4>
               </div>
           <% end %>
            </div>
