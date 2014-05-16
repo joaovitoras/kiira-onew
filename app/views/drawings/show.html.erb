@@ -1,96 +1,82 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Portfolio Item
+            <small>Explain Your Work</small>
+        </h1>
+    </div>
+</div>
 
-            <div class="col-lg-12">
-                <h1 class="page-header">Portfolio Item
-                    <small>Explain Your Work</small>
-                </h1>
-            </div>
+<div class="row">
+    <div class="col-md-8">
+        <a href="<%= @drawing.image_url%>" data-toggle="lightbox" data-gallery="global-gallery" data-parent=".container">
+            <%= image_tag(@drawing.image_url, class: "img-responsive",size: "500,750") %>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <h3>Project Description</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+        <h3>Project Details</h3>
+        <ul>
+            <li>Lorem Ipsum</li>
+            <li>Dolor Sit Amet</li>
+            <li>Consectetur</li>
+            <li>Adipiscing Elit</li>
+        </ul>
+    </div>
+</div>
 
-        </div>
+<div class="row">
 
-        <div class="row">
+    <div class="col-lg-12">
+        <h3 class="page-header">Related Projects</h3>
+    </div>
 
-            <div class="col-md-8">
-                <a href="<%= @drawing.image_url%>" data-toggle="lightbox" data-gallery="global-gallery" data-parent=".container">
-                   
-                    <%= image_tag(@drawing.image_url, class: "img-responsive",size: "500,750") %>
-                    
-                </a>
-            </div>
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">            
+            <img class="img-responsive portfolio-item" src=<%= @drawing.image_url %> >
+        </a>
+    </div>
 
-            <div class="col-md-4">
-                <h3>Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3>Project Details</h3>
-                <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
-                </ul>
-            </div>
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300">
+        </a>
+    </div>
 
-        </div>
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300">
+        </a>
+    </div>
 
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h3 class="page-header">Related Projects</h3>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">            
-
-                    <img class="img-responsive portfolio-item" src=<%= @drawing.image_url %> >
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300">
-                </a>
-            </div>
-
-
- 
-        <!-- yea, yea, not a cdn, i know -->
-        <script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function ($) {
-
-                // delegate calls to data-toggle="lightbox"
-                $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-                    event.preventDefault();
-                    return $(this).ekkoLightbox({
-                        onShown: function() {
-                            if (window.console) {
-                                return console.log('Checking our the events huh?');
-                            }
-                        }
-                    });
-                });
-
-                //Programatically call
-                $('#open-image').click(function (e) {
-                    e.preventDefault();
-                    $(this).ekkoLightbox();
-                });
-                $('#open-youtube').click(function (e) {
-                    e.preventDefault();
-                    $(this).ekkoLightbox();
-                });
+    <div class="col-sm-3 col-xs-6">
+        <a href="#">
+            <img class="img-responsive portfolio-item" src="http://placehold.it/500x300">
+        </a>
+    </div>
+</div>
+<script src="//rawgithub.com/ashleydw/lightbox/master/dist/ekko-lightbox.js"></script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+            event.preventDefault();
+            return $(this).ekkoLightbox({
+                onShown: function() {
+                    if (window.console) {
+                        return console.log('Checking our the events huh?');
+                    }
+                }
             });
-        </script>
+        });
+        //Programatically call
+        $('#open-image').click(function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+        });
+        $('#open-youtube').click(function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    });
+</script>
