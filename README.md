@@ -1,3 +1,5 @@
+# Parado por um tempo :C
+
 # Bem Vindo ao projeto Kiira Onew
 Este app é um portfólio para Designers...
 
@@ -45,5 +47,3 @@ Crie um no app e acesse-o...
 
 ### Autores de Contribuidores
 O [**Kiira Onew Project**](https://github.com/joaovitoras/kiira-onew)é mantido por @joaovitoras. em contribuição com o designer [Kiira Onew](http://kiiraonew.deviantart.com/) para o compartilhamento do seu trabalho de força intuitiva.
-
-
