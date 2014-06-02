@@ -8,6 +8,10 @@ Bundler.require(:default, Rails.env)
 
 module KiiraOnew
   class Application < Rails::Application
+
+  	config.time_zone = 'Brasilia'
+	config.encoding = "utf-8"
+
     config.to_prepare do
       Devise::SessionsController.layout "devise"
       Devise::ConfirmationsController.layout "devise"
