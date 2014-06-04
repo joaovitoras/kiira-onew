@@ -19,8 +19,6 @@ gem "mini_magick"
 gem 'rmagick'
 gem 'gmaps4rails'
 gem 'meta-tags'
-gem 'newrelic_rpm'
-gem "paperclip-dropbox"
 
 group :development do
   	gem 'rails_layout'
@@ -30,6 +28,5 @@ end
 group :production do
   	gem 'pg'
   	gem 'rails_12factor'
-
 end
 
