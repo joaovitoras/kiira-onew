@@ -71,7 +71,7 @@ KiiraOnew::Application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-
+  config.assets.precompile += %w(application.css devise.css drawings.css galleries.css news.css)
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
 
