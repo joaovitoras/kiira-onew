@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/konjoot/rails_admin_flatly_theme.git
+  revision: 0f70933dbc603d2f2f3b8ccb14e2f933aad95af6
+  specs:
+    rails_admin_flatly_theme (1.1.0)
+      rails (> 3.1.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -195,6 +202,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails_12factor
   rails_admin
+  rails_admin_flatly_theme!
   rails_layout
   rmagick
   sass-rails (~> 4.0.0)

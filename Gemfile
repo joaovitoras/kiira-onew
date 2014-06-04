@@ -19,6 +19,7 @@ gem "mini_magick"
 gem 'rmagick'
 gem 'gmaps4rails'
 gem 'meta-tags'
+gem 'rails_admin_flatly_theme', :git => 'git://github.com/konjoot/rails_admin_flatly_theme.git'
 
 group :development do
   	gem 'rails_layout'
