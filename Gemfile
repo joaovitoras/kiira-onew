@@ -23,7 +23,7 @@ gem 'meta-tags'
 group :development do
   	gem 'rails_layout'
   	gem 'sqlite3'
-
+  	gem 'better_errors'
 end
 group :production do
   	gem 'pg'
