@@ -20,6 +20,7 @@ gem 'rmagick'
 gem 'gmaps4rails'
 gem 'meta-tags'
 gem 'newrelic_rpm'
+gem "paperclip-dropbox"
 
 group :development do
   	gem 'rails_layout'
