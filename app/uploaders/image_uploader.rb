@@ -8,11 +8,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :home do
-    process :resize_to_fit => [360,230]
+    process resize_to_fit: [360,230]
   end
 
   version :drawings do
-    process :resize_to_fit => [163,150]
+    process resize_to_fit: [163,150]
   end
 
 
