@@ -11,7 +11,7 @@ KiiraOnew::Application.routes.draw do
   get '/about/oque',           to: 'static_page#what', as: :what
   get '/about/porque',         to: 'static_page#why',  as: :why
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root "galleries#index"
 
