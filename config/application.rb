@@ -11,6 +11,8 @@ module KiiraOnew
     ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
+    config.app_generators.stylesheet_engine :less
+    config.assets.precompile += %w(superhero.js superhero.css bootswatch.js)
 
     config.to_prepare do
       Devise::SessionsController.layout "devise"

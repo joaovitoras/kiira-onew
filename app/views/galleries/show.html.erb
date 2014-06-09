@@ -9,7 +9,22 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header"><%= @gallery.name %></h1>
+        <h1 class="page-header">Drawings - <%= @gallery.name.capitalize %> <i class="fa fa-picture-o"></i></h1>
+    </div>
+</div>
+
+<div class="box-image">
+    <div class="row">
+        <% @gallery.drawings.each do | drawing | %>
+            <div class="col-md-3 portfolio-item">
+                <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
+                    <%= image_tag(drawing.image_url(:home), class: "img-thumbnail" )  if drawing.image?  %>
+                    <h4><%= drawing.name %>
+                        <%= tag("i", class: "fa fa-external-link")%> </i>
+                    </h4>
+                <%end%>
+            </div>
+        <% end %>
     </div>
 </div>
 
@@ -42,27 +57,7 @@
         </ul>
     </div>
 </div>
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Drawings <i class="fa fa-picture-o"></i></h1>
-    </div>
-</div>
-<div class="box-image">
-    <div class="row">
-        <% @gallery.drawings.each do | drawing | %>
-            <div class="col-md-3 portfolio-item">
-                <%= link_to gallery_drawing_path(@gallery,drawing) do %>
-                    <%= image_tag(drawing.image_url(:home), class: "img-thumbnail" )  if drawing.image?  %>
-                <%end%>
-                <h4><%= link_to gallery_drawing_path(@gallery,drawing) do  %> 
-                    <%= drawing.name %>
-                    <%= tag("i", class: "fa fa-external-link")%> </i></a>
-                    <% end %>
-                </h4>
-            </div>
-        <% end %>
-    </div>
-</div>
+
 
 
 <div id="fb-root"></div>
