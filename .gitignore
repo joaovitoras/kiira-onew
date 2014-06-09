@@ -14,8 +14,9 @@ db/database.yml
 log/*
 pkg
 Procfile.local
-public/uploads
-public/public
+public/uploads*
+public/assets*
+public/public*
 rdoc
 tmp/*
 tmtags
