@@ -20,9 +20,7 @@ rdoc
 tmp/*
 tmtags
 \#*
-public/drawing*
-public/uploads*
-
+public/drawing**
+public/uploads**
 db/schema.rb
-
-public/assets/*
+public/assets/**
