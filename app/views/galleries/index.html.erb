@@ -17,17 +17,16 @@
     <% @galleries.each do | gallery | %>
         <div class="col-md-4 portfolio-item">
             <div class="box-image">
-                <%= link_to gallery_path(gallery) do  %>
+                <%= link_to gallery_path(gallery), class: "link-not-decorate" do %> 
                     <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>
-                <%end%>
-                <h4><%= link_to gallery_path(gallery) do %> 
+
+                <h4>
                         <%=gallery.name%>
-                        <%= tag("i", class: "fa fa-external-link")%></i>  
-                    <%end%>
-                    <i class="fa fa-picture-o right">
+                                        <i class="fa fa-picture-o right">
                     <%= gallery.drawings.count %></i>
                 </h4>
-                <p class="description"> fa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o right <i class="fa fa-info-circle right-bottom"></i></p>
+                <p class="description"> fa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o right<%= tag("i", class: "fa fa-external-link right-bottom")%></i></p>
+                <%end%>
             </div>
         </div>
     <%end%>
