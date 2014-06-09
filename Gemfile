@@ -3,7 +3,6 @@ ruby '2.1.1'
 
 gem 'rails', '4.0.2'
 gem 'carrierwave-dropbox'
-gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem "carrierwave"
@@ -20,6 +19,16 @@ gem 'rmagick'
 gem 'gmaps4rails'
 gem 'meta-tags'
 gem 'rails_admin_flatly_theme', :git => 'git://github.com/konjoot/rails_admin_flatly_theme.git'
+gem 'sass-rails', '~> 4.0.0'
+
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails', '~> 3.1.1'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
+
+gem 'twitter-bootswatch-rails-fontawesome', '~> 4.0'
+gem 'therubyracer'
 
 group :development do
   	gem 'rails_layout'

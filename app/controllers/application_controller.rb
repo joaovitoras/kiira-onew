@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :hero_info
-
+  layout 'superhero'
   protect_from_forgery with: :exception
 
   protected 
