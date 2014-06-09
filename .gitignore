@@ -15,7 +15,6 @@ log/*
 pkg
 Procfile.local
 public/uploads
-public/assets
 public/public
 rdoc
 tmp/*
@@ -25,3 +24,5 @@ public/drawing*
 public/uploads*
 
 db/schema.rb
+
+public/assets/*
