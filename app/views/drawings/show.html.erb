@@ -2,6 +2,9 @@
     <title><%= "Kiira Onew Home" %></title>
     <meta property="og:title" content="Kiira Onew"/>
     <meta property="og:type" content="website"/>
+    <%= stylesheet_link_tag "lightbox", :media => "all" %>
+    <%= javascript_include_tag "jquery-1.11.0", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "lightbox", "data-turbolinks-track" => true %>
 <% end %>
 
 <p id="notice"><%= notice %></p>
@@ -15,8 +18,7 @@
 
 <div class="row">
     <div class="col-md-8">
-        <a href="<%= @drawing.image_url%>" data-toggle="lightbox" data-gallery="global-gallery" data-parent=".container">
-            <%= image_tag(@drawing.image_url, class: "img-responsive",size: "500,750") %>
+        <a href=<%= @drawing.image_url%> data-lightbox="lightbox" data-title=<%= @drawing.name%> ><%= image_tag(@drawing.image_url, class: "img-responsive",size: "500,750") %></a>           
         </a>
     </div>
     <div class="col-md-4">
