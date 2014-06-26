@@ -127,3 +127,5 @@ pt-BR:
         default_col_sep: ","
         col_sep: "Separador de colunas"
         col_sep_help: "Deixar em branco para usar omissão ('%{value}')" # value is default_col_sep
+      errors:
+      
