@@ -28,34 +28,20 @@
         <% end %>
     </div>
 </div>
+<div class="box-image">
+    <div class="row">
+        <div class="col-xs-6 col-md-4 column">
+            <h2 class="text-info">Details <i class="fa fa-info right"></i></h2>
+                <ul class="nav">
+                    <li><p style="font-size: 14px;"><%=@gallery.description%></p style="font-size: 14px;"></li>
+                </ul>
+        </div>
 
-<div class="row">
-    <div class="col-xs-6 col-md-4 column">
-        <h2 class="text-info">Details <i class="fa fa-info right"></i></h2>
-            <ul class="nav">
-                <li><h4><%=@gallery.description%> See in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in InstagramSee in Instagram</h4></li>
-            </ul>
-    </div>
-    <div class="col-xs-6 col-md-3 column">
-        <h2 class="text-info">Links <i class="fa fa-link right"></i></h2>
-        <ul class="nav">
-            <h4><i class="fa fa fa-picture-o"></i> <%=@gallery.drawings.size%> Drawings</h3>
-            <h4><i class="fa fa fa-picture-o"></i> See in deviantArt</h3>
-            <h4><i class="fa fa fa-pinterest"></i>  See in Printerest</h3>
-            <h4><i class="fa fa fa-instagram"></i>  See in Instagram </h3>
-        </ul>
-    </div>
 
-    <div class="col-xs-6 col-md-3  column">
-        <h2 class="text-info"><i class="fa  fa-share right"></i>Share in:  </h2>
-        <ul class="nav">
-            <h4><i class="fa fa fa-picture-o"></i> Share in deviantArt</h3>
-            <h4><i class="fa fa fa-pinterest"></i>  <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=<%="localhost:3000"+@gallery.drawings.first.image_url%>&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
-
-            <h4><i class="fa fa fa-instagram"></i> <a href="https://twitter.com/share" class="twitter-share-button" data-text="Visualizando a galeria de <%= @gallery.name %> do @kiira_Onew - <%= request.original_url %>" data-via="kiira-Onew" data-lang="pt" data-related="kiira_Onew" data-hashtags="Gallery,kiira_Onew">Tweetar</a></h3>
-            <h4><i class="fa fa fa-instagram"></i>  <div class="fb-share-button" data-href="<%= request.original_url %>" data-type="button_count"></div>
-            <h4><i class="fa fa fa-instagram"></i>  <div class="g-plus" data-action="share" data-annotation="bubble"></div> </h3>
-        </ul>
+        <div class="col-xs-6 col-md-3  column">
+            <h2 class="text-info"><i class="fa  fa-share right"></i>Share in:</h2>
+            <div class="addthis_sharing_toolbox"></div>
+        </div>
     </div>
 </div>
 

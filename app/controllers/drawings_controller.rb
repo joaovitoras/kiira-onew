@@ -1,5 +1,5 @@
 class DrawingsController < ApplicationController
-  before_action :set_drawing, only: [:show, :edit, :update, :destroy]
+  before_action :set_drawing, only: [:show]
 
   # GET /drawings
   # GET /drawings.json
