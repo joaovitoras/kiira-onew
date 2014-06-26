@@ -1,9 +1,5 @@
 RailsAdmin.config do |config|
 
-  require 'i18n'
-  I18n.default_locale = :'pt-BR'
-
-
   config.main_app_name = ['Kiira', 'Dashboard']
 
   ## == Devise ==
