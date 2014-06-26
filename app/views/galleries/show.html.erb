@@ -5,6 +5,7 @@
     <meta property="og:url" content=<%= request.original_url %>/>
     <meta property="og:description" content=<%= @gallery.description %>/>
     <meta property="og:image" content=<%= @gallery.drawings.first.image_url%>/>
+    <% title("#{@gallery.name} Arts - Kiira Onew") %>
 <% end %>
 
 <div class="row">

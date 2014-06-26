@@ -1,5 +1,9 @@
 @import "superhero/base";
-
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
 // Superhero 3.1.1
 // Bootswatch
 // -----------------------------------------------------
@@ -578,7 +582,15 @@ p.description {
   margin-bottom: 34px;
 }
 
+.panel-default{
+  color: inherit;
+  background-color: rgba(78, 93, 108, 0.4);
+}
 
+.panel-footer{
+  color: inherit;
+  background-color: rgba(78, 93, 108, 0.4);
+}
 
 .jumbotron {
     padding: 30px;
@@ -593,4 +605,21 @@ p.description {
     .container {
         max-width: 100%;
     }
+}
+
+
+.link-not-decorate{
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+  &:focus{
+    color: white;
+    text-decoration: underline;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
 }
