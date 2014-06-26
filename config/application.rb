@@ -13,6 +13,12 @@ module KiiraOnew
   	config.encoding = "utf-8"
     config.app_generators.stylesheet_engine :less
     config.assets.precompile += %w(superhero.js superhero.css bootswatch.js)
+    
+    I18n.config.enforce_available_locales = false
+    config.i18n.default_locale = "pt-BR"
+    config.i18n.locale         = "pt-BR"
+    config.i18n.available_locales = ["pt-BR"]
+    config.i18n.load_path += Dir[Rails.root.join('config/locales', config.i18n.locale, '**/*.yml').to_s]
 
     config.to_prepare do
       Devise::SessionsController.layout "devise"
