@@ -1,7 +1,10 @@
 <% content_for :head do %>
-    <title><%= "Kiira Onew Home" %></title>
-    <meta property="og:title" content="Kiira Onew"/>
-    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Kiira Onew - Digital Art">
+    <meta property="fb:app_id" content="653396958070822">
+    <meta property="og:image" content="<%= "#{request.protocol}#{request.host_with_port}#{@drawing.image_url}"%>">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@drawing.name}" %>">
+    <meta property="og:description" content="<%= @drawing.description %>">
     <%= stylesheet_link_tag "lightbox", :media => "all" %>
     <%= javascript_include_tag "jquery-1.11.0", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "lightbox", "data-turbolinks-track" => true %>
