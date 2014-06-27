@@ -1,11 +1,10 @@
 <% content_for :head do %>
-    <title><%= "Kiira Onew #{@gallery.name}" %></title>
-    <meta property="og:title" content=<%= "Kiira Onew #{@gallery.name}" %>/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content=<%= request.original_url %>/>
-    <meta property="og:description" content=<%= @gallery.description %>/>
-    <meta property="og:image" content=<%= "#{request.protocol}#{request.host_with_port}#{@gallery.drawings.first.image_url}" %>/>
-    <% title("#{@gallery.name} Arts - Kiira Onew") %>
+    <meta property="og:site_name" content="Kiira Onew - Digital Art">
+    <meta property="fb:app_id" content="653396958070822">
+    <meta property="og:image" content="<%= "#{request.protocol}#{request.host_with_port}#{@gallery.drawings.first.image_url}"%>">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
+    <meta property="og:description" content="<%= @gallery.description %>">
 <% end %>
 
 <div class="row">
@@ -13,7 +12,6 @@
         <h1 class="page-header">Drawings - <%= @gallery.name.capitalize %> <i class="fa fa-picture-o"></i></h1>
     </div>
 </div>
-<%= request.original_url %>
 <div class="box-image">
     <div class="row">
         <% @gallery.drawings.each do | drawing | %>
