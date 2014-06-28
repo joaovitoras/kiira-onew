@@ -8,12 +8,13 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :home do
-    process resize_to_fit: [360,230]
+    process resize_to_fill: [348,249]
   end
 
-  version :drawings do
-    process resize_to_fit: [163,150]
+  version :thumb do
+    process resize_to_fill: [260,187]
   end
+  
 
 
   def store_dir

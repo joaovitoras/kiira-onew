@@ -17,7 +17,7 @@
         <% @gallery.drawings.each do | drawing | %>
             <div class="col-md-3 portfolio-item">
                 <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
-                    <%= image_tag(drawing.image_url(:home), class: "img-thumbnail" )  if drawing.image?  %>
+              <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
                     <h4><%= drawing.name %>
                         <%= tag("i", class: "fa fa-external-link")%> </i>
                     </h4>
