@@ -29,9 +29,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
         
         <h3>Compartilhe:</h3>
-        <a href="#"><img class="image-pinterest"></a>
+        <a href="#" onClick="<%= "window.open('http://www.pinterest.com/pin/create/bookmarklet/?media=#{@drawing.image_url}&url=#{request.original_url}&is_video=false&description=#{@drawing.name}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-pinterest"></a>
         <a href="#" onClick="<%= "window.open('http://www.facebook.com/share.php?u=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-facebook"></a>
-        <a href="#"><img class="image-googleplus"></a>
+        <a href="#" onClick="<%= "window.open('https://plus.google.com/share?url=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-googleplus"></a>
         <a href="#"><img class="image-twitter"></a>
         <a href="#"><img class="image-tumblr"></a>
 
