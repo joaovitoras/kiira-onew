@@ -44,9 +44,11 @@
     </div>
 
     <% relactions_random(@drawing.gallery).each do |drawing|%>
-        <div class="col-sm-3 col-xs-6 portfolio-item">
-            <a href="#"><%= image_tag(drawing.image_url, class: "img-responsive") %> </a>
-        </div>
+        <%= link_to gallery_drawing_path(drawing.gallery, drawing), class: "link-not-decorate" do %> 
+            <div class="col-sm-3 col-xs-6 portfolio-item">
+                <%= image_tag(drawing.image_url(:thumb), class: "img-responsive img-thumbnail") %>
+            </div>
+        <% end %>
     <% end %>
 </div>
 <br/>
