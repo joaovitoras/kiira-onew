@@ -10,6 +10,12 @@
     <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@drawing.name}" %>">
     <meta itemprop="description" content="<%= @drawing.description %>">
     <meta itemprop="image" content="<%= @drawing.image_url %>">
+    <meta property="twitter:card" content="photo" />
+    <meta property="twitter:site" content="@kiira_Onew" />
+    <meta property="twitter:title" content="<%= "Kiira Onew - #{@drawing.name}" %>" />
+    <meta property="twitter:description" content="<%= @drawing.description %>." />
+    <meta property="twitter:image" content="<%= @drawing.image_url %>" />
+    <meta property="twitter:url" content="<%= request.original_url %>" />
 <% end %>
 
 <p id="notice"><%= notice %></p>
@@ -32,7 +38,7 @@
         <a href="#" onClick="<%= "window.open('http://www.pinterest.com/pin/create/bookmarklet/?media=#{@drawing.image_url}&url=#{request.original_url}&is_video=false&description=#{@drawing.name}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-pinterest"></a>
         <a href="#" onClick="<%= "window.open('http://www.facebook.com/share.php?u=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-facebook"></a>
         <a href="#" onClick="<%= "window.open('https://plus.google.com/share?url=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-googleplus"></a>
-        <a href="#"><img class="image-twitter"></a>
+        <a href="#" onClick="<%= "window.open('http://twitter.com/home?status=#{@drawing.name}+#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-twitter"></a>
         <a href="#"><img class="image-tumblr"></a>
 
         <h3>Visite meu perfil no Deviantart</h3>
