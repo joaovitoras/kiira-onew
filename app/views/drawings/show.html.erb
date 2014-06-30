@@ -3,10 +3,13 @@
     <meta property="fb:app_id" content="653396958070822">
     <meta property="og:image" content="<%= @drawing.image_url %>">
     <meta property="og:url" content="<%= request.original_url %>">
-    <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@drawing.name}" %>">
+    <meta property="og:title" content="<%= "Kiira Onew - #{@drawing.name}" %>">
     <meta property="og:description" content="<%= @drawing.description %>">
     <%= stylesheet_link_tag "lightbox", :media => "all" %>
     <%= javascript_include_tag "lightbox", "data-turbolinks-track" => true %>
+    <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@drawing.name}" %>">
+    <meta itemprop="description" content="<%= @drawing.description %>">
+    <meta itemprop="image" content="<%= @drawing.image_url %>">
 <% end %>
 
 <p id="notice"><%= notice %></p>

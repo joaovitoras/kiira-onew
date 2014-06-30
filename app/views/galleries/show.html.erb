@@ -5,6 +5,9 @@
     <meta property="og:url" content="<%= request.original_url %>">
     <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
     <meta property="og:description" content="<%= @gallery.description %>">
+    <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
+    <meta itemprop="description" content="<%= @gallery.description %>">
+    <meta itemprop="image" content="<%= @gallery.image_url %>">
 <% end %>
 
 <div class="row">
@@ -39,7 +42,7 @@
             <h2 class="text-info"><i class="fa  fa-share-alt right"></i>Share in:</h2>
             <a href="#" onClick="<%= "window.open('http://www.pinterest.com/pin/create/bookmarklet/?media=#{@gallery.image_url}&url=#{request.original_url}&is_video=false&description=#{@gallery.name}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-pinterest"></a>
             <a href="#" onClick="<%= "window.open('http://www.facebook.com/share.php?u=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-facebook"></a>
-            <a href="#"><img class="image-googleplus"></a>
+            <a href="#" onClick="<%= "window.open('https://plus.google.com/share?url=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-googleplus"></a>
             <a href="#"><img class="image-twitter"></a>
             <a href="#"><img class="image-tumblr"></a>
         </div>
