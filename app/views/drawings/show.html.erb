@@ -41,7 +41,7 @@
         <a href="#" onClick="<%= "window.open('http://www.facebook.com/share.php?u=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-facebook"></a>
         <a href="#" onClick="<%= "window.open('https://plus.google.com/share?url=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-googleplus"></a>
         <a href="#" onClick="<%= "window.open('https://twitter.com/intent/tweet?hashtags=MakeArt%2C&original_referer=#{request.original_url}%2F&text=Gostei%20da%20ilustração%20#{@drawing.name}%20feita%20por%20@kiira_Onew%20-%20O%20Kiira%20Onew&tw_p=tweetbutton&url=#{request.original_url}&via=kiira_Onew','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-twitter"></a>
-        <a href="#" onClick="<%= "window.open('http://www.tumblr.com/share/photo?source=#{@drawing.image_url}&caption=#{link_to @drawing.name, gallery_drawing_path(@drawing.gallery, @drawing)}+by+%3Ca%20href%3D%22http%3A%2F%2Fkiiraonew.deviantart.com%2F%22%3EKiira%20Onew%3C%2Fa%3E%0A&clickthru=#{@drawing.image_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-tumblr"></a>
+        <a href="#" onClick="<%= "window.open('http://www.tumblr.com/share/photo?source=#{@drawing.image_url}&caption=#{link_to @drawing.name, gallery_drawing_path(@drawing.gallery, @drawing)}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-tumblr"></a>
 
         <h3>Visite meu perfil no Deviantart</h3>
         <a href="http://kiiraonew.deviantart.com/" target="_blank"><%= image_tag("deviantart-banner.png", class: "img-responsive") %></a>
