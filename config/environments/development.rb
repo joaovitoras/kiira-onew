@@ -17,8 +17,8 @@ KiiraOnew::Application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'kiira-production.herokuapp.com',
-    user_name:            'jonybwl@gmail.com',
-    password:             'eunaosei.123',
+    user_name:            ENV['USER_EMAIL'],
+    password:             ENV['PSW_EMAIL'],
     authentication:       'plain',
     enable_starttls_auto: true  }
 

@@ -61,6 +61,16 @@ KiiraOnew::Application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'kiira-production.herokuapp.com',
+    user_name:            ENV['USER_EMAIL'],
+    password:             ENV['PSW_EMAIL'],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
   config.assets.precompile += %w( jquery-1.11.0.js lightbox.js superhero.js lightbox.css superhero.css)
   
   # Ignore bad email addresses and do not raise email delivery errors.
