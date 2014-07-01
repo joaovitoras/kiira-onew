@@ -23,6 +23,12 @@
         <%= render 'partials/navigation' %>
         <% if @page_title == "Home"%>
             <div class="container">
+                <% flash.each do |name, msg| -%>
+                  <%= content_tag :div, class: "alert alert-#{name} alert-dismissible", role: "alert" do -%>
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <%= msg %>
+                  <% end %>  
+                <% end -%>
                 <%= render 'partials/hero' %>
                 <%= yield %>
                 <%= render 'partials/infos_about'%>
