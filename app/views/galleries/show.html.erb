@@ -1,28 +1,28 @@
 <% content_for :head do %>
-    <meta property="og:site_name" content="Kiira Onew - Digital Art">
-    <meta property="fb:app_id" content="653396958070822">
-    <meta property="og:image" content="<%= @gallery.image_url %>">
-    <meta property="og:url" content="<%= request.original_url %>">
-    <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
-    <meta property="og:description" content="<%= @gallery.description %>">
-    <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
-    <meta itemprop="description" content="<%= @gallery.description %>">
-    <meta itemprop="image" content="<%= @gallery.image_url %>">
+   <meta property="og:site_name" content="Kiira Onew - Digital Art">
+   <meta property="fb:app_id" content="653396958070822">
+   <meta property="og:image" content="<%= @gallery.image_url %>">
+   <meta property="og:url" content="<%= request.original_url %>">
+   <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
+   <meta property="og:description" content="<%= @gallery.description %>">
+   <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
+   <meta itemprop="description" content="<%= @gallery.description %>">
+   <meta itemprop="image" content="<%= @gallery.image_url %>">
 <% end %>
 
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Drawings - <%= @gallery.name.capitalize %> <i class="fa fa-picture-o"></i></h1>
+   <div class="col-lg-12">
+   <h1 class="page-header">Ilustrações - <%= @gallery.name.capitalize %> <i class="fa fa-picture-o"></i></h1>
     </div>
 </div>
 <div class="box-image">
     <div class="row">
-        <% @gallery.drawings.paginate(:page => params[:page]).each do | drawing | %>
-            <div class="col-md-3 portfolio-item">
-                <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
+   <% @gallery.drawings.paginate(:page => params[:page]).each do | drawing | %>
+   <div class="col-md-3 portfolio-item">
+   <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
               <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
-                    <h4><%= drawing.name %>
-                        <%= tag("i", class: "fa fa-external-link")%> </i>
+   <h4><%= drawing.name %>
+   <%= tag("i", class: "fa fa-external-link")%> </i>
                     </h4>
                 <%end%>
             </div>
@@ -36,18 +36,19 @@
 <div class="box-image">
     <div class="row">
         <div class="col-xs-6 col-md-4 column">
-            <h2 class="text-info">Details <i class="fa fa-info right"></i></h2>
+            <h2 class="text-info">Informações <i class="fa fa-info right"></i></h2>
                 <ul class="nav">
                     <li><p style="font-size: 14px;"><%=@gallery.description%></p style="font-size: 14px;"></li>
                 </ul>
         </div>
 
         <div class="col-xs-6 col-md-3  column">
+            <h2 class="text-info"><i class="fa  fa-share-alt right"></i>Compartilhe:</h2>
             <a href="#" onClick="<%= "window.open('http://www.pinterest.com/pin/create/bookmarklet/?media=#{@gallery.image_url}&url=#{request.original_url}&is_video=false&description=#{@gallery.name}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-pinterest"></a>
             <a href="#" onClick="<%= "window.open('http://www.facebook.com/share.php?u=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-facebook"></a>
             <a href="#" onClick="<%= "window.open('https://plus.google.com/share?url=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-googleplus"></a>
             <a href="#" onClick="<%= "window.open('https://twitter.com/intent/tweet?hashtags=MakeArt%2C&original_referer=#{request.original_url}%2F&text=Gostei%20da%20ilustração%20#{@gallery.name}%20feita%20por%20@kiira_Onew%20-%20O%20Kiira%20Onew&tw_p=tweetbutton&url=#{request.original_url}&via=kiira_Onew','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-twitter"></a>
-              <a href="#" onClick="window.open('http://www.tumblr.com/share/photo?source=<%=u @gallery.image_url %>&caption=<%=u "#{link_to @gallery.name, gallery_path(@gallery)} by #{link_to "Kiira Onew", "http://kiiraonew.deviantart.com"} "%>&clickthru=<%=u request.original_url %>','sharer','toolbar=0,status=0,width=580,height=325');"><img class="image-tumblr"></a>
+            <a href="#" onClick="window.open('http://www.tumblr.com/share/photo?source=<%=u @gallery.image_url %>&caption=<%=u "#{link_to @gallery.name, gallery_path(@gallery)} by #{link_to "Kiira Onew", "http://kiiraonew.deviantart.com"} "%>&clickthru=<%=u request.original_url %>','sharer','toolbar=0,status=0,width=580,height=325');"><img class="image-tumblr"></a>
         </div>
     </div>
 </div>
