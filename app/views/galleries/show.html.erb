@@ -17,7 +17,7 @@
 </div>
 <div class="box-image">
     <div class="row">
-        <% @gallery.drawings.each do | drawing | %>
+        <% @gallery.drawings.paginate(:page => params[:page]).each do | drawing | %>
             <div class="col-md-3 portfolio-item">
                 <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
               <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
@@ -28,6 +28,10 @@
             </div>
         <% end %>
     </div>
+
+</div>
+<div class="row pagination-centered">
+    <%= will_paginate @gallery.drawings.paginate(:page => params[:page]), renderer: BootstrapPagination::Rails %>
 </div>
 <div class="box-image">
     <div class="row">

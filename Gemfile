@@ -20,6 +20,8 @@ gem 'carrierwave-dropbox'
 gem 'sass-rails', '~> 4.0.0'
 gem 'mini_magick'
 gem 'rmagick'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 gem 'twitter-bootswatch-rails', '~> 3.1.1'
 gem 'twitter-bootswatch-rails-helpers'

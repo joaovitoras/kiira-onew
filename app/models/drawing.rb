@@ -10,4 +10,6 @@ class Drawing < ActiveRecord::Base
 	friendly_id :name, use: :slugged
 	mount_uploader :image, ImageUploader
 	belongs_to :gallery
+
+	self.per_page = 16
 end
