@@ -15,20 +15,17 @@
    <h1 class="page-header">Ilustrações - <%= @gallery.name.capitalize %> <i class="fa fa-picture-o"></i></h1>
     </div>
 </div>
-<div class="box-image">
-    <div class="row">
+<div class="row">
    <% @gallery.drawings.paginate(:page => params[:page]).each do | drawing | %>
    <div class="col-md-3 portfolio-item">
-   <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
-              <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
-   <h4><%= drawing.name %>
-   <%= tag("i", class: "fa fa-external-link")%> </i>
-                    </h4>
-                <%end%>
-            </div>
-        <% end %>
+    <div class="box-image">
+       <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
+          <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
+          <h4><%= drawing.name %><%= tag("i", class: "fa fa-external-link")%> </i></h4>
+        <%end%>
     </div>
-
+   </div>
+   <% end %>
 </div>
 <div class="row pagination-centered">
     <%= will_paginate @gallery.drawings.paginate(:page => params[:page]), renderer: BootstrapPagination::Rails %>
