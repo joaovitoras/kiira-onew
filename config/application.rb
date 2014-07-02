@@ -8,8 +8,6 @@ Bundler.require(:default, Rails.env)
 
 module KiiraOnew
   class Application < Rails::Application
-    ENV['USER_EMAIL'] = "jonybwl@gmail.com"
-    ENV['PSW_EMAIL'] = "eunaosei.123"
     ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
