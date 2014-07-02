@@ -12,6 +12,7 @@ class GalleriesController < ApplicationController
   def show
   end
 
+
   def send_mail
     name = params[:name]
     email = params[:email]
