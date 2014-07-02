@@ -8,6 +8,8 @@ Bundler.require(:default, Rails.env)
 
 module KiiraOnew
   class Application < Rails::Application
+    ENV['USER_EMAIL'] = "jonybwl@gmail.com"
+    ENV['PSW_EMAIL'] = "eunaosei.123"
     ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
@@ -23,7 +25,8 @@ module KiiraOnew
       Devise::SessionsController.layout "devise"
       Devise::ConfirmationsController.layout "devise"
       Devise::UnlocksController.layout "devise"            
-      Devise::PasswordsController.layout "devise"        
+      Devise::PasswordsController.layout "devise"  
+      Devise::RegistrationsController.layout "devise"      
     end
   end
 end
