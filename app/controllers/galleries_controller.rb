@@ -13,14 +13,12 @@ class GalleriesController < ApplicationController
   end
 
   def send_mail
-    def send_mail
     name = params[:name]
     email = params[:email]
     message = params[:comments]
     UserMailer.contact_me(name, email, message).deliver
     flash[:success] = "Email enviado com sucesso! Obrigado!"
     redirect_to root_path
-end
   end
 
   private
