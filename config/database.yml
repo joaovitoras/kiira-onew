@@ -8,8 +8,6 @@ development:
   database: db/development.sqlite3
   pool: 5
   timeout: 5000
-  username: kiira
-  password: kiira
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,5 +23,3 @@ production:
   database: kiira-onew
   pool: 5
   timeout: 5000
-  username: kiira
-  password: kiira
