@@ -11,9 +11,11 @@ module KiiraOnew
     ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
+
     config.app_generators.stylesheet_engine :less
-    config.assets.precompile += %w(superhero.js superhero.css bootswatch.js)
-    
+    config.less.compress = true    
+    config.assets.compress = true
+
     I18n.config.enforce_available_locales = false
     config.i18n.locale         = "pt-BR"
     config.i18n.available_locales = ["pt-BR",:en]
