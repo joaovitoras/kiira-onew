@@ -14,7 +14,6 @@ module KiiraOnew
 
     config.app_generators.stylesheet_engine :less
     config.less.compress = true    
-    config.assets.compress = true
 
     I18n.config.enforce_available_locales = false
     config.i18n.locale         = "pt-BR"

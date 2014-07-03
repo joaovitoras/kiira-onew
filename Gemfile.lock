@@ -79,6 +79,10 @@ GEM
     gmaps4rails (2.1.2)
     haml (4.0.5)
       tilt
+    heroku_rails_deflate (1.0.3)
+      actionpack (>= 3.2.13)
+      activesupport (>= 3.2.13)
+      rack (>= 1.4.5)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -211,6 +215,7 @@ GEM
     will_paginate (3.0.6)
     will_paginate-bootstrap (1.0.0)
       will_paginate (>= 3.0.3)
+    yui-compressor (0.12.0)
 
 PLATFORMS
   ruby
@@ -226,6 +231,7 @@ DEPENDENCIES
   devise (= 3.0.0.rc)
   friendly_id
   gmaps4rails
+  heroku_rails_deflate
   jbuilder (~> 1.2)
   jquery-rails
   mini_magick
@@ -247,3 +253,4 @@ DEPENDENCIES
   unicorn
   will_paginate
   will_paginate-bootstrap
+  yui-compressor

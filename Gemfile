@@ -36,6 +36,7 @@ end
 
 group :production do
   	gem 'pg'
+    gem 'heroku_rails_deflate'
   	gem 'rails_12factor'
   	gem 'dalli'
     gem 'unicorn'
