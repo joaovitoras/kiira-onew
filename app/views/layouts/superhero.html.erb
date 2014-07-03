@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= javascript_include_tag "jquery-1.11.0", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "jquery-1.11.0", "data-turbolinks-track" => true, defer: true  %>
     <title> <%= content_for?(:title) ? yield(:title) : "Kiira Onew Designer" %></title>
-    <%= javascript_include_tag "jquery.queryloader2.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "jquery.queryloader2.js", "data-turbolinks-track" => true,  defer: true %>
 
     <%= csrf_meta_tags %>
     <%= yield :head %>
@@ -16,10 +16,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
 
-    <%= stylesheet_link_tag "superhero", :media => "all" %>
-
-    <%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
-
+    <%= stylesheet_link_tag "superhero", :media => "all", defer: true %>
   </head>
   <body>
         <%= render 'partials/navigation' %>
@@ -44,6 +41,6 @@
         <div class="container">
             <%= render 'partials/footer'%>
         </div>
-    <%= javascript_include_tag "superhero" %>
+    <%= javascript_include_tag "superhero", defer: true %>
   </body>
 </html>
