@@ -9,5 +9,11 @@ class Gallery < ActiveRecord::Base
 	friendly_id :name, use: :slugged
 	mount_uploader :image, ImageUploader
 	has_many :drawings
+
+	after_update :clear_cache
+ 
+	def clear_cache
+	  ActionController::Base.expire_page("/#{self.slug}")
+	end
 	
 end

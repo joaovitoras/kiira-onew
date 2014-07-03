@@ -27,6 +27,8 @@ gem "binding_of_caller"
 gem 'twitter-bootswatch-rails', '~> 3.1.1'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'therubyracer'
+gem 'actionpack-action_caching'
+gem 'actionpack-page_caching'
 
 group :development do
   	gem 'rails_layout'
