@@ -5,7 +5,7 @@
     <meta property="og:url" content="<%= request.original_url %>">
     <meta property="og:title" content="<%= "Kiira Onew - #{@drawing.name}" %>">
     <meta property="og:description" content="<%= @drawing.description %>">
-    <%= stylesheet_link_tag "lightbox", :media => "all", defer: true%>
+    <%= stylesheet_link_tag "lightbox", :media => "all", defer: true %>
     <%= javascript_include_tag "lightbox", "data-turbolinks-track" => true, defer: true %>
     <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@drawing.name}" %>">
     <meta itemprop="description" content="<%= @drawing.description %>">
@@ -17,14 +17,6 @@
     <meta property="twitter:image" content="<%= @drawing.image_url %>" />
     <meta property="twitter:url" content="<%= request.original_url %>" />
     <meta name="twitter:creator" content="joaovitor_as">
-    <style>
-      a .image-facebook{content: url("../assets/facebook.png"); }
-      a .image-googleplus{content: url("../assets/googleplus.png"); }
-      a .image-pinterest{content: url("../assets/pinterest.png"); }
-      a .image-tumblr{content: url("../assets/tumblr.png"); }
-      a .image-twitter{content: url("../assets/twitter.png"); }
-      a .image-deviantart{content: url("../assets/deviantart.png"); }
-   </style>
 
 <% end %>
 
