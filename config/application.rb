@@ -12,7 +12,7 @@ module KiiraOnew
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
     config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/cache"
-
+    config.cache_store = :file_store, "#{Rails.root.to_s}/public/cache"
     config.app_generators.stylesheet_engine :less
     config.less.compress = true    
 
