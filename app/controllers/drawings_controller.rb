@@ -1,6 +1,5 @@
 class DrawingsController < ApplicationController
   before_action :set_drawing, only: [:show]
-  caches_action :show, :layout => true
 
   #include => [:gallery]
   # GET /drawings/1

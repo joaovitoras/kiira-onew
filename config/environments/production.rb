@@ -13,14 +13,14 @@ KiiraOnew::Application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
+
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
   # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
   config.assets.css_compressor = :sass
@@ -53,7 +53,6 @@ KiiraOnew::Application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
-  config.cache_store = :memory_store
   
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
@@ -74,9 +73,6 @@ KiiraOnew::Application.configure do
   config.assets.precompile += %w( jquery-1.11.0.js lightbox.js superhero.js lightbox.css superhero.css)
   
   config.assets.compress = true
-  config.assets.digest = true
-  config.static_cache_control = "public, max-age=31536000"
-
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

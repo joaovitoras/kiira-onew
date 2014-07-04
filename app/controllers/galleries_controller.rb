@@ -1,8 +1,6 @@
 class GalleriesController < ApplicationController
   before_action :set_gallery, only: [:show]
   after_action  :expire_page, only: [:update]
-  caches_action :index
-  caches_action :show
 
   # GET /galleries
   # GET /galleries.json
@@ -13,11 +11,6 @@ class GalleriesController < ApplicationController
   # GET /galleries/1
   # GET /galleries/1.json
   def show
-  end
-
-  def expire_page
-    expire_page :action => "show"
-    expire_page :action => "index"
   end
 
   def send_mail
