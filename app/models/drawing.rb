@@ -12,10 +12,4 @@ class Drawing < ActiveRecord::Base
 	belongs_to :gallery
 
 	self.per_page = 16
-
-	after_update :clear_cache
- 
-	  def clear_cache
-	    ActionController::Base.expire_page("/#{self.slug}")
-	  end
 end

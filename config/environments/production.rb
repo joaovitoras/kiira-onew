@@ -53,6 +53,12 @@ KiiraOnew::Application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
+<<<<<<< HEAD
+||||||| 5a39558... testing cache
+  config.cache_store = :memory_store
+=======
+  config.cache_store = :dalli_store
+>>>>>>> parent of 5a39558... testing cache
   
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"

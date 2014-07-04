@@ -1,7 +1,12 @@
 class DrawingsController < ApplicationController
   before_action :set_drawing, only: [:show]
 
-  #include => [:gallery]
+  # GET /drawings
+  # GET /drawings.json
+  def index
+    @drawings = Drawing.all
+  end
+
   # GET /drawings/1
   # GET /drawings/1.json
   def show
@@ -9,6 +14,6 @@ class DrawingsController < ApplicationController
 
   private
     def set_drawing
-      @drawing = Drawing.includes(:gallery).friendly.find(params[:id])
+      @drawing = Drawing.friendly.find(params[:id])
     end
 end

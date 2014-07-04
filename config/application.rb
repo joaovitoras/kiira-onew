@@ -11,7 +11,6 @@ module KiiraOnew
     ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
-    config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/cache"
 
     config.app_generators.stylesheet_engine :less
     config.less.compress = true    

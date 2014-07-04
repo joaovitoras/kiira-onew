@@ -1,6 +1,13 @@
 class GalleriesController < ApplicationController
   before_action :set_gallery, only: [:show]
+<<<<<<< HEAD
   after_action  :expire_page, only: [:update]
+||||||| 5a39558... testing cache
+  after_action  :expire_page, only: [:update]
+  caches_action :index
+  caches_action :show
+=======
+>>>>>>> parent of 5a39558... testing cache
 
   # GET /galleries
   # GET /galleries.json
@@ -13,6 +20,16 @@ class GalleriesController < ApplicationController
   def show
   end
 
+<<<<<<< HEAD
+||||||| 5a39558... testing cache
+  def expire_page
+    expire_page :action => "show"
+    expire_page :action => "index"
+  end
+
+=======
+
+>>>>>>> parent of 5a39558... testing cache
   def send_mail
     name = params[:name]
     email = params[:email]
