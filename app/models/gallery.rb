@@ -10,4 +10,9 @@ class Gallery < ActiveRecord::Base
 	mount_uploader :image, ImageUploader
 	has_many :drawings
 
+
+ 
+	def clear_cache
+		FileUtils.rm_rf(Dir.glob('public/cache/*'))	
+	end
 end
