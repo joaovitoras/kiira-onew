@@ -14,6 +14,6 @@ class DrawingsController < ApplicationController
 
   private
     def set_drawing
-      @drawing = Drawing.friendly.find(params[:id])
+      @drawing = Drawing.includes(:gallery).friendly.find(params[:id])
     end
 end
