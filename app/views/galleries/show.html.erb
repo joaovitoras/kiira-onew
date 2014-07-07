@@ -17,8 +17,8 @@
 </div>
 <div class="row">
    <% @gallery.drawings.paginate(:page => params[:page]).each do | drawing | %>
-   <div class="col-md-3 col-xs-4 portfolio-item">
-    <div class="box-image">
+  <div class="col-md-3 col-xs-6 portfolio-item ">
+    <div class="box-image pagination-centered">
        <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
           <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
           <h4><%= drawing.name %><%= tag("i", class: "fa fa-external-link")%> </i></h4>
