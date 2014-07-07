@@ -17,7 +17,7 @@
 </div>
 <div class="row">
    <% @gallery.drawings.paginate(:page => params[:page]).each do | drawing | %>
-   <div class="col-md-3 portfolio-item">
+   <div class="col-md-3 col-xs-4 portfolio-item">
     <div class="box-image">
        <%= link_to gallery_drawing_path(@gallery,drawing), class: "link-not-decorate" do %>
           <%= image_tag(drawing.image_url(:thumb), size: "260x187",class: "img-thumbnail img-responsive" )  if drawing.image?  %>
@@ -32,15 +32,15 @@
 </div>
 <div class="box-image">
     <div class="row">
-        <div class="col-xs-6 col-md-4 column">
-            <h2 class="text-info">Informações <i class="fa fa-info right"></i></h2>
+        <div class="col-xs-6 column">
+            <h2 class="text-info">Informações <i class="fa fa-info"></i></h2>
                 <ul class="nav">
                     <li><p style="font-size: 14px;"><%=@gallery.description%></p style="font-size: 14px;"></li>
                 </ul>
         </div>
 
-        <div class="col-xs-6 col-md-3  column">
-            <h2 class="text-info"><i class="fa  fa-share-alt right"></i>Compartilhe:</h2>
+        <div class="col-xs-6 column">
+            <h2 class="text-info">Compartilhe: <i class="fa  fa-share-alt"></i></h2>
             <a href="#" onClick="<%= "window.open('http://www.pinterest.com/pin/create/bookmarklet/?media=#{@gallery.image_url}&url=#{request.original_url}&is_video=false&description=#{@gallery.name}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-pinterest"></a>
             <a href="#" onClick="<%= "window.open('http://www.facebook.com/share.php?u=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-facebook"></a>
             <a href="#" onClick="<%= "window.open('https://plus.google.com/share?url=#{request.original_url}','sharer','toolbar=0,status=0,width=580,height=325');"%>"><img class="image-googleplus"></a>
