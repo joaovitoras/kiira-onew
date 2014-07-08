@@ -16,7 +16,9 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header"><%= @drawing.name%>
-            <small><%= @drawing.gallery.name%></small>
+            <small>(<%= @drawing.gallery.name%>)</small>
+            <a href="<%= gallery_path(@drawing.gallery)%>" class="btn btn-default btn-primary pull-right"><span class="glyphicon glyphicon-arrow-left"></span> Voltar para <%= @drawing.gallery.name%></a>
+
         </h1>
     </div>
 
