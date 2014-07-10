@@ -55,7 +55,12 @@
     <% end %>
 </div>
 <br/>
-<a href="<%=request.original_url%>#disqus_thread">Diga-me o que achou do <%= @drawing.name %> nos comentários abaixo</a>
+
+<div class="row">
+    <div class="col-lg-12">
+<h3><a href="<%=request.original_url%>#disqus_thread" class="link-not-decorate">Diga-me o que achou do <%= @drawing.name %> nos comentários abaixo</a></h3>
+ </div>
+</div>
  <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
