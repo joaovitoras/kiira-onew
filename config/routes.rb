@@ -5,6 +5,10 @@ KiiraOnew::Application.routes.draw do
   resources :galleries do
   	resources :drawings
   end
+
+  resources :sales do 
+    resources :products
+  end
   
   match '/send_mail',          to: 'galleries#send_mail',         via: 'post'
   get 'news',                  to: 'news#index',                  as: :news
