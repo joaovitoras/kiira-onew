@@ -11,7 +11,7 @@
       <div class="col-md-3">
         <div class="col-item">
           <div class="photo">
-              <%= image_tag(product.image_url(:home), class: "img-responsive" ) if product.image? %>
+              <%= image_tag(product.image_url(:fit), class: "img-responsive" ) if product.image? %>
           </div>
           <div class="info text-center">
               <div class="row">
@@ -27,8 +27,51 @@
                       <h3 class="text-success" style="display:inline"><strong>R$ <%= product.price %></strong></h3>
                   </div>
               </div>
-              <button type="button" class="btn btn-primary btn-block">
-                <%= link_to "Veja mais", sale_product_path(@sale, product), class: "link-not-decorate" %>
+              <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">
+                  Pedir
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                      </div>
+                      <div class="modal-body">
+                       <%= form_for(Order.new) do |f| %>
+                          <div class="field">
+                            <%= f.label :user_name %><br>
+                            <%= f.text_field :user_name %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :user_mail %><br>
+                            <%= f.text_field :user_mail %>
+                          </div>
+                          <div class="field" style="display:none">
+                            <%= f.collection_select(:product_id,
+                                                    Product.order(:id),
+                                                    :id, :name, :prompt => true, :selected => product) %>
+                          </div>
+                            
+                          <div class="field">
+                            <%= f.label :facebook_contact %><br>
+                            <%= f.text_field :facebook_contact %>
+                          </div>
+                          <div class="actions">
+                            <%= f.submit %>
+                          </div>
+                        <% end %>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </button>
           </div>
         </div>
@@ -46,7 +89,7 @@
       <% relactions_random_sales.each do |product|%>
           <%= link_to sale_path(product.sale), class: "link-not-decorate" do %> 
               <div class="col-sm-3 col-xs-6 portfolio-item">
-                  <%= image_tag(product.image_url(:thumb), class: "img-responsive img-thumbnail") %>
+                  <%= image_tag(product.image_url(:fit), class: "img-responsive img-thumbnail") %>
               </div>
           <% end %>
       <% end %>
