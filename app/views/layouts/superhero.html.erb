@@ -19,31 +19,16 @@
   </head>
   <body>
         <%= render 'partials/navigation' %>
-        <% if @page_title == "Home"%>
-            <div class="container">
-                <% flash.each do |name, msg| -%>
-                  <%= content_tag :div, class: "alert alert-#{name} alert-dismissible", role: "alert" do -%>
-                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <%= msg %>
-                  <% end %>  
-                <% end -%>
-                <%= render 'partials/hero' %>
-                <%= yield %>
-                <%= render 'partials/sales'%>
-                <%= render 'partials/infos_about'%>
-                <%= render 'partials/contact_me'%>
-            </div>
-        <%else%>
-            <div class="container">
-                <%= yield %>
-            </div>
-        <%end%>
+        
+        <%= yield %>
+            
         <div class="container">
             <%= render 'partials/footer'%>
         </div>
+
         <a href="javascript:" id="return-to-top" role="button" title="Click para retornar ao topo da pagina" data-toggle="tooltip" data-placement="left"><i class="fa fa-chevron-up"></i></a>
 
 
-    <%= javascript_include_tag "superhero", defer: true %>
+        <%= javascript_include_tag "superhero", defer: true %>
   </body>
 </html>

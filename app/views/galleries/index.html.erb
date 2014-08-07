@@ -11,23 +11,38 @@
     <meta itemprop="description" content="Web Site of Digital art By: Kiira-Onew">
     <meta itemprop="image" content="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-frc3/t31.0-8/q71/s720x720/1147627_1402097546674750_919579330_o.jpg">
 <% end %>
-    
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Meus trabalhos - Galerias <i class="fa fa-picture-o"></i></h1>
-    </div>
-</div>
-<div class="row">
-    <% @galleries.each do | gallery | %>
-        <div class="col-md-4 portfolio-item">
-            <div class="box-image">
-                <%= link_to gallery_path(gallery), class: "link-not-decorate" do %> 
-                    <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>
-                    <h4 class="text-primary"><%=gallery.name%><i class="fa fa-picture-o right">
-                    <%= gallery.drawings.count %></i></h4>
-                <p class="description"> fa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o right</p>
-                <%end%>
-            </div>
+
+<div class="container">
+    <% flash.each do |name, msg| -%>
+      <%= content_tag :div, class: "alert alert-#{name} alert-dismissible", role: "alert" do -%>
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <%= msg %>
+      <% end %>  
+    <% end -%>
+
+    <%= render 'partials/hero' %>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Meus trabalhos - Galerias <i class="fa fa-picture-o"></i></h1>
         </div>
-    <%end%>
+    </div>
+
+    <div class="row">
+        <% @galleries.each do | gallery | %>
+            <div class="col-md-4 portfolio-item">
+                <div class="box-image">
+                    <%= link_to gallery_path(gallery), class: "link-not-decorate" do %> 
+                        <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>
+                        <h4 class="text-primary"><%=gallery.name%><i class="fa fa-picture-o right">
+                        <%= gallery.drawings.count %></i></h4>
+                    <p class="description"> fa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o rightfa fa-picture-o right</p>
+                    <%end%>
+                </div>
+            </div>
+        <%end%>
+    </div>
+
+    <%= render 'partials/sales'%>
+    <%= render 'partials/infos_about'%>
+    <%= render 'partials/contact_me'%>
 </div>
