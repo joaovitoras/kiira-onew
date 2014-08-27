@@ -37,38 +37,38 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        <h4 class="modal-title" id="myModalLabel">Novo Pedido</h4>
                       </div>
                       <div class="modal-body">
-                       <%= form_for(Order.new) do |f| %>
-                          <div class="field">
-                            <%= f.label :user_name %><br>
-                            <%= f.text_field :user_name %>
-                          </div>
-                          <div class="field">
-                            <%= f.label :user_mail %><br>
-                            <%= f.text_field :user_mail %>
-                          </div>
-                          <div class="field" style="display:none">
-                            <%= f.collection_select(:product_id,
-                                                    Product.order(:id),
-                                                    :id, :name, :prompt => true, :selected => product) %>
-                          </div>
-                            
-                          <div class="field">
-                            <%= f.label :facebook_contact %><br>
-                            <%= f.text_field :facebook_contact %>
-                          </div>
-                          <div class="actions">
-                            <%= f.submit %>
-                          </div>
+                        <%= form_for Order.new, :html => { :class => 'form-horizontal' } do |f| %>
+                          <fieldset>
+                            <legend>Informações</legend>
+                            <div class="form-group">
+                              <%= f.label :user_name, "Nome", :class => 'col-lg-2 control-label' %>
+                              <div class="col-lg-10">
+                                <%= f.text_field :user_name, :class => 'form-control', placeholder: "Digite seu nome..." %>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <%= f.label :user_mail, "Email",:class => 'col-lg-2 control-label', for: "inputEmail" %>
+                              <div class="col-lg-10">
+                                <%= f.text_field :user_mail, :class => 'form-control', id: "inputEmail", placeholder: "Digite seu email..." %>
+                              </div>
+                            </div>
+                              <%= f.hidden_field :product_id, :class => 'form-control', value: "#{product.id}" %>
+                            <div class="form-group">
+                              <%= f.label :facebook_contact, "Facebook", :class => 'col-lg-2 control-label' %>
+                              <div class="col-lg-10">
+                                <%= f.text_field :facebook_contact, :class => 'form-control', placeholder: "Ex: www.facebook.com/kiira.onew" %>
+                              </div>
+                            </div>
+                        
+                            <div class="modal-footer">
+                              <%= f.submit "Enviar Pedido", :class => 'btn btn-primary' %>
+                              <%= link_to "Cancelar", orders_path, class: "btn btn-default", :'data-dismiss' => "modal", style: "background-color: #b20000" %>
+                            </div>
+                          </fieldset>
                         <% end %>
-
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                      </div>
                     </div>
                   </div>
                 </div>
