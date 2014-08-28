@@ -1,5 +1,5 @@
 <% content_for :head do %>
-  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:url" content="<%= <%= url(request.path) %> %>">
   <meta property="og:site_name" content="Kiira Onew - Digital Art">
   <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
   <meta property="og:description" content="<%= @gallery.description %>">
