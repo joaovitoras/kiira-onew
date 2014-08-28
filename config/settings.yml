@@ -1,0 +1,11 @@
+development:
+  main_domain: 'kiiraonew.com.br'
+  domain: 'http://localhost:3000'
+
+staging:
+  main_domain: 'staging.kiiraonew.com.br'
+  domain: 'http://staging.kiiraonew.com.br'
+
+production:
+  main_domain: 'kiiraonew.com.br'
+  domain: 'http://kiiraonew.herokuapp.com'
