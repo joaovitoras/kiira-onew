@@ -1,13 +1,13 @@
 <% content_for :head do %>
-   <meta property="og:site_name" content="Kiira Onew - Digital Art">
-   <meta property="fb:app_id" content="653396958070822">
-   <meta property="og:image" content="<%= @gallery.image_url %>">
-   <meta property="og:url" content="<%= request.original_url %>">
-   <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
-   <meta property="og:description" content="<%= @gallery.description %>">
-   <meta itemprop="name" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
-   <meta itemprop="description" content="<%= @gallery.description %>">
-   <meta itemprop="image" content="<%= @gallery.image_url %>">
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:site_name" content="Kiira Onew - Digital Art">
+  <meta property="og:title" content="<%= "Kiira Onew - Galeria #{@gallery.name}" %>">
+  <meta property="og:description" content="<%= @gallery.description %>">
+  <meta property="og:image" content="<%= @gallery.image_url %>">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="400">
+  <meta property="fb:app_id" content="653396958070822">
+
 <% end %>
 <div class="container">
 <div class="row">
