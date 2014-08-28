@@ -16,6 +16,8 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "superhero", :media => "all", defer: true %>
+    <%= google_analytics %>
+
   </head>
   <body>
         <%= render 'partials/navigation' %>
@@ -30,6 +32,5 @@
 
 
         <%= javascript_include_tag "superhero", defer: true %>
-        <%= google_analytics %>
   </body>
 </html>
