@@ -13,7 +13,7 @@
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-picture-o"></i> Portifolio <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-picture-o"></i> Galerias <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <% Gallery.all.each do | gallery |%>
             <li><a href=<%=gallery_path(gallery)%>> <%= gallery.name %></a></li>
@@ -21,21 +21,15 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><i class="fa fa-external-link"></i> Links Sociais <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><i class="fa fa-external-link"></i> Redes Sociais <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="./bootstrap.min.css">Facebook</a></li>
-            <li><a href="./bootstrap.css">Twitter</a></li>
-            <li><a href="./bootstrap.css">YouTube</a></li>
-            <li><a href="./bootstrap.css">Tumblr</a></li>
-            <li><a href="./bootstrap.css">YouTube</a></li>
+            <li><a href="http://kiiraonew.deviantart.com/">DeviantArt</a></li>
+            <li><a href="https://www.facebook.com/kiiraonewartworks">Facebook</a></li>
+            <li><a href="https://twitter.com/kiiraonew">Twitter</a></li>
+            <li><a href="https://www.youtube.com/channel/UCZtDSKPuxKn68ktw7kwGSWQ">YouTube</a></li>
+            <li><a href=".http://itskiiraonewartworks.tumblr.com/">Tumblr</a></li>
             <li><a href="./bootstrap.css">Google +</a></li>
-            <li class="divider"></li>
-            <li><a href="./variables.less">DeviantArt</a></li>
-            <li><a href="./bootswatch.less">bootswatch.less</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href=<%= news_path %>><i class="fa fa-list-alt"></i> News</a>
+           </ul>
         </li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-info-circle"></i> Sobre mim <span class="caret"></span></a>
