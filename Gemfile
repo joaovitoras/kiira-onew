@@ -23,7 +23,7 @@ gem 'rmagick'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem "binding_of_caller"
-
+gem "dynamic_sitemaps"
 gem 'twitter-bootswatch-rails', '~> 3.1.1'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'therubyracer'

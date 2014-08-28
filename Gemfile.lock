@@ -70,6 +70,7 @@ GEM
       warden (~> 1.2.1)
     dropbox-sdk (1.6.4)
       json
+    dynamic_sitemaps (2.0.0)
     erubis (2.7.0)
     execjs (2.1.0)
     font-awesome-rails (4.1.0.0)
@@ -228,6 +229,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dalli
   devise (= 3.0.0.rc)
+  dynamic_sitemaps
   friendly_id
   gmaps4rails
   heroku_rails_deflate
