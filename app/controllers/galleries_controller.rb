@@ -30,9 +30,6 @@ class GalleriesController < ApplicationController
     end
   end
 
-  def robots
-  end
-
   private
     def set_gallery
       @gallery = Gallery.friendly.find(params[:id])

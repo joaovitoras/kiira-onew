@@ -21,7 +21,6 @@ KiiraOnew::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get "sitemap.xml" => "galleries#sitemap", format: :xml, as: :sitemap
-  get "robots.txt" => "galleries#robots", format: :text, as: :robots
 
   root 'galleries#index'
 
