@@ -20,9 +20,9 @@ class GalleriesController < ApplicationController
     flash[:success] = "Email enviado com sucesso! Obrigado!"
     redirect_to root_path
   end
-
-  def sitemap
-    path = Rails.root.join("app", "sitemap", "sitemaps","sitemap.xml")
+  
+  def sitemaps
+    path = Rails.root.join("public", "sitemaps", "sitemap.xml")
     if File.exists?(path)
       render xml: open(path).read
     else

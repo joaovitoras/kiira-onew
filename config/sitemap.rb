@@ -7,5 +7,5 @@ sitemap :site do
 end
 
 sitemap_for Gallery.all
-
+sitemap_for Sale.all
 ping_with "#{host}/sitemap.xml"
