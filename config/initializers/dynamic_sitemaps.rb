@@ -1,5 +1,5 @@
 DynamicSitemaps.configure do |config|
-  config.path = Rails.root.join("public")
+  config.path = Rails.root.join("app", "sitemap")
   config.folder = "sitemaps" # This folder is emptied on each sitemap generation
   config.index_file_name = "sitemap.xml"
   config.always_generate_index = false # Makes sitemap.xml contain the sitemap
