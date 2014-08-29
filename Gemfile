@@ -23,7 +23,7 @@ gem 'rmagick'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem "binding_of_caller"
-
+gem "dynamic_sitemaps"
 gem 'twitter-bootswatch-rails'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'therubyracer'
@@ -39,7 +39,6 @@ group :production do
     gem 'heroku_rails_deflate'
   	gem 'rails_12factor'
   	gem 'dalli'
-    gem 'unicorn'
-
+    gem 'passenger'
 end
 
