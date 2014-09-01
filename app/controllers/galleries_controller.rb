@@ -22,7 +22,7 @@ class GalleriesController < ApplicationController
   end
   
   def sitemaps
-    path = Rails.root.join("public", "sitemaps", "#{params[:name]}.xml")
+    path = Rails.root.join("app", "sitemaps", "#{params[:name]}.xml")
     if File.exists?(path)
       render xml: open(path).read
     else
