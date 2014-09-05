@@ -1,4 +1,4 @@
-module ApplicationHelpernd
+module ApplicationHelper
 
   def google_analytics
     if Rails.env.development?
