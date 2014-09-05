@@ -1,5 +1,3 @@
-# Parado por um tempo :C
-
 # Bem Vindo ao projeto Kiira Onew
 Este app é um portfólio para Designers...
 
