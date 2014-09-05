@@ -1,6 +1,6 @@
 KiiraOnew::Application.routes.draw do
 
-  resources :orders
+  resources :orders, only: [:new]
 
   devise_for :users
 
