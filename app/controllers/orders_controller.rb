@@ -26,9 +26,4 @@ class OrdersController < ApplicationController
     def set_order
       @order = Order.find(params[:id])
     end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_params
-      params.require(:order).permit(:user_name, :user_mail, :product_id, :facebook_contact)
-    end
 end
