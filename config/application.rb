@@ -11,7 +11,6 @@ module KiiraOnew
     ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
     config.time_zone = 'Brasilia'
   	config.encoding = "utf-8"
-    config.active_record.whitelist_attributes = true
     config.app_generators.stylesheet_engine :less
     config.less.compress = true    
 
