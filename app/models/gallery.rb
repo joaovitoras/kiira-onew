@@ -17,6 +17,8 @@
 class Gallery < ActiveRecord::Base
 	extend FriendlyId
 
+	attr_accessible :name, :description, :slug, :image
+	
 	before_save validates :name, presence: true, uniqueness: true
 	before_save validates :description, presence: true
 	before_save validates :slug, presence: true, uniqueness: true

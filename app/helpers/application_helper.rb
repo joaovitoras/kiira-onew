@@ -1,9 +1,6 @@
-module ApplicationHelper
-	def title(page_title)
-  		content_for(:title) { page_title }
-	end
+module ApplicationHelpernd
 
-	def google_analytics
+  def google_analytics
     if Rails.env.development?
     '<!-- GOOGLE ANALYTICS should be here -->'.html_safe
 

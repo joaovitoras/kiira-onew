@@ -1,15 +1,15 @@
 KiiraOnew::Application.routes.draw do
 
-  resources :orders
+  resources :orders, only: [:new]
 
   devise_for :users
 
-  resources :galleries, path: "galerias" do
-  	resources :drawings, path: "desenhos"
+  resources :galleries, path: "galerias", only: [:show, :index] do
+  	resources :drawings, path: "desenhos", only: [:show]
   end
 
-  resources :sales, path: "vendas" do 
-    resources :products, path: "produtos"
+  resources :sales, path: "vendas", only: [:show, :index] do 
+    resources :products, path: "produtos", only: [:show]
   end
   
   match '/send_mail',          to: 'galleries#send_mail',         via: 'post'
