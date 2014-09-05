@@ -28,6 +28,8 @@ gem 'twitter-bootswatch-rails'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'therubyracer'
 gem 'newrelic_rpm'
+gem 'protected_attributes'
+
 group :development do
   	gem 'rails_layout'
   	gem 'sqlite3'
