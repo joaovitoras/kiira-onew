@@ -10,5 +10,6 @@ class CreateProducts < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :products, :sale_id
   end
 end

@@ -8,5 +8,6 @@ class CreateDrawings < ActiveRecord::Migration
       t.timestamps
     end
     add_index :drawings, :slug, unique: true
+    add_index :drawings, :gallery_id
   end
 end
