@@ -7,6 +7,5 @@ class CreateGalleries < ActiveRecord::Migration
       
       t.timestamps
     end
-    add_index :galleries, :slug, unique: true
   end
 end

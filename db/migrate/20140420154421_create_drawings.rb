@@ -3,11 +3,10 @@ class CreateDrawings < ActiveRecord::Migration
     create_table :drawings do |t|
       t.string :name
       t.text   :description
-      t.references :gallery
+      t.references :gallery, index: true
       t.string :slug
       t.timestamps
     end
     add_index :drawings, :slug, unique: true
-    add_index :drawings, :gallery_id
   end
 end
