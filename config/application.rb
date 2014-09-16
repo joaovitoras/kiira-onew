@@ -8,13 +8,6 @@ Bundler.require(:default, Rails.env)
 
 module KiiraOnew
   class Application < Rails::Application
-    ENV['RAILS_ADMIN_THEME'] = 'flatly_theme'
-    config.time_zone = 'Brasilia'
-  	config.encoding = "utf-8"
-    config.app_generators.stylesheet_engine :less
-    config.less.compress = true    
-
-    I18n.config.enforce_available_locales = false
     config.i18n.locale         = 'en'
     config.i18n.load_path += Dir[Rails.root.join('config/locales', config.i18n.locale, '**/*.yml').to_s]
 
