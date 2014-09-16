@@ -15,8 +15,7 @@ module KiiraOnew
     config.less.compress = true    
 
     I18n.config.enforce_available_locales = false
-    config.i18n.locale         = "pt-BR"
-    config.i18n.available_locales = ["pt-BR",:en]
+    config.i18n.locale         = 'en'
     config.i18n.load_path += Dir[Rails.root.join('config/locales', config.i18n.locale, '**/*.yml').to_s]
 
     config.to_prepare do
