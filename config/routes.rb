@@ -1,4 +1,5 @@
 KiiraOnew::Application.routes.draw do
+  match '/webhooks/gh/pull_request', :to => 'github#create', via: :post
 
   resources :orders
 
