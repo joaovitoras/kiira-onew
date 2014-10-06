@@ -11,7 +11,7 @@ $ cd kiira-onew
 $ rake db:setup
 $ rake db:seed
 ```
-Agora rode o servidor rails
+Agora rode o servidor rails asdasdas
 ```
 $ rails s
 ```
