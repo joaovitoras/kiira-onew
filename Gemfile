@@ -27,6 +27,7 @@ gem "dynamic_sitemaps"
 gem 'twitter-bootswatch-rails'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'therubyracer'
+gem 'newrelic_rpm'
 
 group :development do
   	gem 'rails_layout'

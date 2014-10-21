@@ -1,6 +1,4 @@
-# Parado por um tempo :C
-
-# Bem Vindo ao projeto Kiira Onew
+# Bem Vindo ao projeto Kiira Onew Hu3 Hu3 [![Code Climate](https://codeclimate.com/repos/541795a8e30ba05ed30138a1/badges/b5803d8d474182c84541/gpa.svg)](https://codeclimate.com/repos/541795a8e30ba05ed30138a1/feed)
 Este app é um portfólio para Designers...
 
 ### Para obter esse app basta utilizar o git clone

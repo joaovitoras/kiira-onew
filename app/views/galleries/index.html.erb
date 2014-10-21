@@ -23,14 +23,14 @@
 
     <%= render 'partials/hero' %>
     <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Meus trabalhos - Galerias <i class="fa fa-picture-o"></i></h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1 class="page-header">Galerias <i class="fa fa-picture-o"></i></h1>
         </div>
     </div>
 
     <div class="row">
         <% @galleries.each do | gallery | %>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 portfolio-item">
                 <div class="box-image">
                     <%= link_to gallery_path(gallery), class: "link-not-decorate" do %> 
                         <%= image_tag(gallery.image_url(:home), class: "img-responsive" ) if gallery.image? %>

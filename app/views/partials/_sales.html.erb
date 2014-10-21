@@ -7,19 +7,19 @@
 </div>
 <% Sale.all.each do |sale| %>
 	<div class="row">
-	    <div class="col-md-3">
+	    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
 	        <div class="col-item">
 	            <div class="photo">
 	                <%= image_tag(sale.image_url(:fit), class: "img-responsive" ) if sale.image? %>
 	            </div>
 	            <div class="info text-center">
 	                <div class="row">
-	                    <div class="col-md-12">
+	                    <div class="col-lg-12">
 	                        <h4 class="text-primary" >
 	                            <%= sale.name %>
 	                        </h4>
 	                    </div>
-	                    <div class="col-md-12">
+	                    <div class="col-lg-12">
 	                        <p class="text-info">
 	                        	<%= sale.description %>
 	               			</p>
