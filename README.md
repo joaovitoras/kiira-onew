@@ -2,7 +2,7 @@
 
 # Bem Vindo ao projeto Kiira Onew
 Este app é um portfólio para Designers...
-
+teste
 ### Para obter esse app basta utilizar o git clone
 ```
 $ git clone git://github.com/joaovitoras/kiira-onew.git
@@ -13,7 +13,7 @@ $ cd kiira-onew
 $ rake db:setup
 $ rake db:seed
 ```
-Agora rode o servidor rails
+Agora rode o servidor rails asdasdas
 ```
 $ rails s
 ```
