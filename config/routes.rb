@@ -1,16 +1,16 @@
 KiiraOnew::Application.routes.draw do
   match '/webhooks/gh/pull_request', :to => 'github#create', via: :post
 
-  resources :orders, only: [:new]
+  resources :orders
 
   devise_for :users
 
-  resources :galleries, path: "galerias", only: [:show, :index] do
-  	resources :drawings, path: "desenhos", only: [:show]
+  resources :galleries, path: "galerias" do
+  	resources :drawings, path: "desenhos"
   end
 
-  resources :sales, path: "vendas", only: [:show, :index] do 
-    resources :products, path: "produtos", only: [:show]
+  resources :sales, path: "vendas" do 
+    resources :products, path: "produtos"
   end
   
   match '/send_mail',          to: 'galleries#send_mail',         via: 'post'

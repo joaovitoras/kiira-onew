@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20150420154433) do
     t.string   "image"
   end
 
-  add_index "drawings", ["gallery_id"], name: "index_drawings_on_gallery_id"
   add_index "drawings", ["slug"], name: "index_drawings_on_slug", unique: true
 
   create_table "friendly_id_slugs", force: true do |t|
@@ -50,6 +49,8 @@ ActiveRecord::Schema.define(version: 20150420154433) do
     t.string   "url_instagram"
     t.string   "image"
   end
+
+  add_index "galleries", ["slug"], name: "index_galleries_on_slug", unique: true
 
   create_table "news", force: true do |t|
     t.string   "title"
@@ -81,8 +82,6 @@ ActiveRecord::Schema.define(version: 20150420154433) do
     t.datetime "updated_at"
     t.string   "slug"
   end
-
-  add_index "products", ["sale_id"], name: "index_products_on_sale_id"
 
   create_table "sales", force: true do |t|
     t.string   "name"

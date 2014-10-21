@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.includes(:sales).all
+    @products = Product.all
   end
 
   # GET /products/1
@@ -15,6 +15,6 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.includes(:sales).friendly.find(params[:id])
+      @product = Product.friendly.find(params[:id])
     end
 end

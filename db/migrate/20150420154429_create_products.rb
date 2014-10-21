@@ -6,7 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :image
       t.integer :stock
       t.text :description
-      t.references :sale, index: true
+      t.references :sale
 
       t.timestamps
     end

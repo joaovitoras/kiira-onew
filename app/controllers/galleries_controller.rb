@@ -4,7 +4,7 @@ class GalleriesController < ApplicationController
   # GET /galleries
   # GET /galleries.json
   def index
-    @galleries = Gallery.includes(:drawings).all
+    @galleries = Gallery.all
   end
 
   # GET /galleries/1
@@ -32,6 +32,6 @@ class GalleriesController < ApplicationController
 
   private
     def set_gallery
-      @gallery = Gallery.includes(:drawings).friendly.find(params[:id])
+      @gallery = Gallery.friendly.find(params[:id])
     end
 end

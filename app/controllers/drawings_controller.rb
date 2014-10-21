@@ -4,7 +4,7 @@ class DrawingsController < ApplicationController
   # GET /drawings
   # GET /drawings.json
   def index
-    @drawings = Drawing.includes(:gallery).all
+    @drawings = Drawing.all
   end
 
   # GET /drawings/1

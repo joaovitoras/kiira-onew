@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-KiiraOnew::Application.config.secret_key_base = SETTINGS[:secret_token]
+KiiraOnew::Application.config.secret_key_base = '78592fa10f900a1304e37524c815917fea970c817e3238f302e3fb466d8dcc1af7ef6a287918e0700ac967b925d08b0d68ea1128f50f051e8ff4dbb3f26c5ec2'

@@ -1,7 +1,6 @@
 development:
   main_domain: 'kiiraonew.com.br'
   domain: 'http://localhost:3000'
-  secret_token: '78592fa10f900a1304e37524c815917fea970c817e3238f302e3fb466d8dcc1af7ef6a287918e0700ac967b925d08b0d68ea1128f50f051e8ff4dbb3f26c5ec2'
 
 staging:
   main_domain: 'staging.kiiraonew.com.br'

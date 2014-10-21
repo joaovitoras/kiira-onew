@@ -3,7 +3,7 @@ class CreateDrawings < ActiveRecord::Migration
     create_table :drawings do |t|
       t.string :name
       t.text   :description
-      t.references :gallery, index: true
+      t.references :gallery
       t.string :slug
       t.timestamps
     end
